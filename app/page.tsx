@@ -1,22 +1,72 @@
+'use client';
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Building, Home as HomeIcon, Briefcase, Award, Users, CheckCircle } from "lucide-react";
+import { ArrowRight, Building, Home as HomeIcon, Briefcase, Award, Users } from "lucide-react";
 import MaxWidthContent from "@/components/maxWidthContent";
 
+const itemsList = [
+  {
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    content: <div className="max-w-3xl mb-10">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        Building Dreams, Creating Communities
+      </h1>
+      <p className="text-md md:text-lg mb-8">
+        Zeeks Homes is Nigeria's premier real estate developer, creating exceptional living and working spaces that stand the test of time.
+      </p>
+      <div className="flex flex-wrap gap-4">
+        <Button size="lg" className="border border-white bg-white text-black hover:text-white" asChild>
+          <Link href="/properties">View Properties</Link>
+        </Button>
+        <Button size="lg" variant="outline" className="bg-transparent" asChild>
+          <Link href="/contact">Contact Us</Link>
+        </Button>
+      </div>
+    </div>
+  },
+  {
+    image: "/images/beacon.png",
+    content: <div className="max-w-3xl mb-10">
+      <div className="border border-white p-2 px-4 w-fit mb-3 text-xs">
+        ONGOING PROJECT
+      </div>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        Beacon City Estate
+      </h1>
+      <p className="text-md md:text-lg mb-8">
+        One of our most notable ongoing projects is Beacon City, an estate located at Pyakasa Lugbe, Abuja. This project consists of 14 plots of 300 sqm semi-detached houses and 5 plots of a 500 sqm fully detached house.      </p>
+      <div className="flex flex-wrap gap-4">
+        <Button size="lg" className="border border-white bg-white text-black hover:text-white" asChild>
+          <Link href="/properties">Learn More</Link>
+        </Button>
+      </div>
+    </div>
+  }
+]
+
 export default function Home() {
+  const [items] = useState(itemsList)
+  const [activeIndex, setActiveIndex] = useState(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev === 0 ? 1 : 0));
+    }, 20000);
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[100vh] flex items-end pb-6">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            src={items[activeIndex].image}
             alt="Luxury Home"
             fill
             style={{ objectFit: "cover" }}
@@ -26,22 +76,7 @@ export default function Home() {
         </div>
         <div className="w-screen relative z-10 text-white">
           <MaxWidthContent>
-            <div className="max-w-3xl mb-10">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Building Dreams, Creating Communities
-              </h1>
-              <p className="text-md md:text-lg mb-8">
-                Zeeks Homes is Nigeria's premier real estate developer, creating exceptional living and working spaces that stand the test of time.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="border border-white bg-white text-black hover:text-white" asChild>
-                  <Link href="/properties">View Properties</Link>
-                </Button>
-                <Button size="lg" variant="outline" className="bg-transparent" asChild>
-                  <Link href="/contact">Contact Us</Link>
-                </Button>
-              </div>
-            </div>
+            {items[activeIndex].content}
             {/* Property Search */}
             <section className="py-8 hidden md:block">
               <div className="container">
@@ -97,6 +132,17 @@ export default function Home() {
                 </div>
               </div>
             </section>
+            <div className="flex gap-2 justify-center">
+              {items.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-3 h-3 rounded-sm transition-colors ${index === activeIndex ? 'bg-white' : 'bg-white/50'
+                    }`}
+                  onClick={() => setActiveIndex(index)}
+                  aria-label={`View slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </MaxWidthContent>
         </div>
       </section>

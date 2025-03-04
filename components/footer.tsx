@@ -13,7 +13,6 @@ export default function Footer() {
             {/* Company Info */}
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Building className="h-6 w-6" />
                 <span className="font-bold text-xl">Zeeks Homes</span>
               </div>
               <p className="mb-4 text-primary-foreground/80">
