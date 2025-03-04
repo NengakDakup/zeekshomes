@@ -61,7 +61,7 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col h-100vh">
       {/* Hero Section */}
       <section className="relative h-[100vh] flex items-end pb-6">
         <div className="absolute inset-0 z-0">
