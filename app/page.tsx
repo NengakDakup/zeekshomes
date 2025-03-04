@@ -24,9 +24,9 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
-        <div className="container relative z-10 text-white">
+        <div className="w-screen relative z-10 text-white">
           <MaxWidthContent>
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mb-10">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                 Building Dreams, Creating Communities
               </h1>
@@ -42,72 +42,71 @@ export default function Home() {
                 </Button>
               </div>
             </div>
+            {/* Property Search */}
+            <section className="-mb-48 py-8">
+              <div className="container">
+                <div className="bg-background text-black shadow-lg p-6 relative z-20">
+                  <h2 className="text-2xl font-bold mb-4">Find Your Dream Property</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div>
+                      <label className="text-sm font-medium mb-1 block">Location</label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select location" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="lagos">Lagos</SelectItem>
+                          <SelectItem value="abuja">Abuja</SelectItem>
+                          <SelectItem value="port-harcourt">Port Harcourt</SelectItem>
+                          <SelectItem value="ibadan">Ibadan</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-1 block">Property Type</label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="apartment">Apartment</SelectItem>
+                          <SelectItem value="house">House</SelectItem>
+                          <SelectItem value="villa">Villa</SelectItem>
+                          <SelectItem value="land">Land</SelectItem>
+                          <SelectItem value="commercial">Commercial</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium mb-1 block">Budget</label>
+                      <Select>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select budget" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="0-50m">₦0 - ₦50M</SelectItem>
+                          <SelectItem value="50m-100m">₦50M - ₦100M</SelectItem>
+                          <SelectItem value="100m-200m">₦100M - ₦200M</SelectItem>
+                          <SelectItem value="200m+">₦200M+</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="flex items-end">
+                      <Button className="w-full">Search Properties</Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </MaxWidthContent>
         </div>
       </section>
 
-      {/* Property Search */}
-      <section className=" py-8">
-        <div className="container">
-          <div className="bg-background rounded-lg shadow-lg p-6 relative z-20">
-            <MaxWidthContent>
-              <h2 className="text-2xl font-bold mb-4">Find Your Dream Property</h2>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div>
-                  <label className="text-sm font-medium mb-1 block">Location</label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select location" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="lagos">Lagos</SelectItem>
-                      <SelectItem value="abuja">Abuja</SelectItem>
-                      <SelectItem value="port-harcourt">Port Harcourt</SelectItem>
-                      <SelectItem value="ibadan">Ibadan</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-1 block">Property Type</label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="apartment">Apartment</SelectItem>
-                      <SelectItem value="house">House</SelectItem>
-                      <SelectItem value="villa">Villa</SelectItem>
-                      <SelectItem value="land">Land</SelectItem>
-                      <SelectItem value="commercial">Commercial</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
-                  <label className="text-sm font-medium mb-1 block">Budget</label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select budget" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="0-50m">₦0 - ₦50M</SelectItem>
-                      <SelectItem value="50m-100m">₦50M - ₦100M</SelectItem>
-                      <SelectItem value="100m-200m">₦100M - ₦200M</SelectItem>
-                      <SelectItem value="200m+">₦200M+</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="flex items-end">
-                  <Button className="w-full">Search Properties</Button>
-                </div>
-              </div>
-            </MaxWidthContent>
-          </div>
-        </div>
-      </section>
+
 
       {/* Featured Projects */}
       <section className="py-16">
-        <div className="container">
+        <MaxWidthContent >
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -200,12 +199,12 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* About Us Section */}
       <section className="py-16 bg-muted">
-        <div className="container">
+        <MaxWidthContent>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">About Zeeks Homes</h2>
@@ -258,12 +257,12 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Services */}
       <section className="py-16">
-        <div className="container">
+        <MaxWidthContent>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Services</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -324,12 +323,12 @@ export default function Home() {
               </Button>
             </Card>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Testimonials */}
       <section className="py-16 bg-muted">
-        <div className="container">
+        <MaxWidthContent>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">What Our Clients Say</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -404,12 +403,12 @@ export default function Home() {
               <Link href="/testimonials">Read More Testimonials</Link>
             </Button>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container">
+        <MaxWidthContent>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Find Your Dream Property?</h2>
             <p className="text-lg mb-8">
@@ -424,12 +423,12 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Blog Preview */}
       <section className="py-16">
-        <div className="container">
+        <MaxWidthContent>
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-3xl font-bold">Latest Articles</h2>
             <Button variant="outline" asChild>
@@ -519,7 +518,7 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
     </div>
   );
