@@ -463,7 +463,7 @@ export default function Home() {
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10" asChild>
+              <Button size="lg" variant="outline" className="text-white border-white bg-transparent hover:bg-white hover:text-black" asChild>
                 <Link href="/properties">Browse Properties</Link>
               </Button>
             </div>
