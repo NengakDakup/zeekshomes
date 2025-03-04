@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[100vh] flex items-center">
+      <section className="relative h-[100vh] flex items-end pb-6">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
@@ -43,10 +43,9 @@ export default function Home() {
               </div>
             </div>
             {/* Property Search */}
-            <section className="-mb-48 py-8">
+            <section className="py-8 hidden md:block">
               <div className="container">
                 <div className="bg-background text-black shadow-lg p-6 relative z-20">
-                  <h2 className="text-2xl font-bold mb-4">Find Your Dream Property</h2>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     <div>
                       <label className="text-sm font-medium mb-1 block">Location</label>
