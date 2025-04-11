@@ -38,7 +38,7 @@ const BlogPreview = () => {
                 Exploring emerging trends and opportunities in Nigeria's dynamic property market.
               </p>
               <Button variant="link" className="px-0" asChild>
-                <Link href="/blog/future-real-estate-nigeria">
+                <Link href="/blog/1">
                   Read More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -65,7 +65,7 @@ const BlogPreview = () => {
                 Essential advice for those looking to make their first real estate investment.
               </p>
               <Button variant="link" className="px-0" asChild>
-                <Link href="/blog/first-time-investor-tips">
+                <Link href="/blog/2">
                   Read More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -92,7 +92,7 @@ const BlogPreview = () => {
                 How eco-friendly upgrades can increase your property's value and appeal.
               </p>
               <Button variant="link" className="px-0" asChild>
-                <Link href="/blog/sustainable-home-features">
+                <Link href="/blog/3">
                   Read More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
