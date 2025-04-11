@@ -44,7 +44,7 @@ const itemsList = [
         One of our most notable ongoing projects is Beacon City, an estate located at Pyakasa Lugbe, Abuja. This project consists of 14 plots of 300 sqm semi-detached houses and 5 plots of a 500 sqm fully detached house.      </p>
       <div className="flex flex-wrap gap-4">
         <Button size="lg" className="border border-white bg-white text-black hover:text-white" asChild>
-          <Link href="/properties">Learn More <MoveRight className="ml-1" /> </Link>
+          <Link href="/projects/beacon-city">Learn More <MoveRight className="ml-1" /> </Link>
         </Button>
       </div>
     </div>
