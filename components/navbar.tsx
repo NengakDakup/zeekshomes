@@ -37,8 +37,8 @@ const projectsItems = [
 ];
 
 const propertiesItems = [
-  { name: "Search Properties", href: "/properties/search", description: "Find your dream home or investment" },
-  { name: "Featured Properties", href: "/properties/featured", description: "Explore our premium listings" },
+  { name: "Search Properties", href: "/properties", description: "Find your dream home or investment" },
+  { name: "Featured Properties", href: "/properties#featured", description: "Explore our premium listings" },
   { name: "Virtual Tours", href: "/properties/virtual-tours", description: "Take a 3D walkthrough of select properties" },
 ];
 

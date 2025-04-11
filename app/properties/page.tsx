@@ -5,42 +5,43 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { 
-  Select, 
-  SelectContent, 
-  SelectItem, 
-  SelectTrigger, 
-  SelectValue 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 import { MapPin, Home, Building, Bath, BedDouble, Square as SquareFeet, Search, Filter, ArrowRight } from "lucide-react";
+import MaxWidthContent from "@/components/maxWidthContent";
 
 export default function PropertiesPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-20 bg-muted">
-        <div className="container">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Find Your Perfect Property</h1>
-            <p className="text-xl mb-8">
+      <section className="relative pt-40 bg-primary">
+        <MaxWidthContent>
+          <div className="max-w-3xl mt-5 bg-white p-6 md:p-10 border-l-8 border-gold">
+            <h1 className="text-3xl font-bold mb-3 text-gold">Find Your Perfect Property</h1>
+            <p className="text-lg mb-8">
               Browse our extensive collection of premium properties across Nigeria.
             </p>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Search and Filter Section */}
       <section className="py-8 border-b">
-        <div className="container">
-          <div className="bg-background rounded-lg shadow-lg p-6 -mt-16 relative z-20">
+        <MaxWidthContent>
+          <div className="bg-background rounded-lg shadow-lg p-6 -mt-16 relative z-20 border-t-4 border-primary">
             <div className="flex flex-col md:flex-row justify-between items-center mb-6">
               <h2 className="text-2xl font-bold mb-4 md:mb-0">Property Search</h2>
               <Button variant="outline" className="flex items-center gap-2">
                 <Filter className="h-4 w-4" /> Advanced Filters
               </Button>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
               <div>
                 <Select>
@@ -99,21 +100,21 @@ export default function PropertiesPage() {
                 </Select>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-4">
               <div className="relative flex-grow">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input placeholder="Search by keyword" className="pl-10" />
               </div>
-              <Button>Search Properties</Button>
+              <Button className="bg-gold"> Search Properties <Search className="ml-1 w-5 h-5" /> </Button>
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Properties Listing */}
       <section className="py-16">
-        <div className="container">
+        <MaxWidthContent>
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div>
               <h2 className="text-3xl font-bold mb-2">Available Properties</h2>
@@ -151,8 +152,8 @@ export default function PropertiesPage() {
               </div>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold">Luxury Waterfront Villa</h3>
-                  <p className="font-bold text-primary">₦250M</p>
+                  <h3 className="text-xl font-bold text-gold">Luxury Waterfront Villa</h3>
+                  <p className="font-bold text-gold">₦250M</p>
                 </div>
                 <div className="flex items-center text-muted-foreground mb-4">
                   <MapPin className="h-4 w-4 mr-1" />
@@ -193,8 +194,8 @@ export default function PropertiesPage() {
               </div>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold">Modern Apartment</h3>
-                  <p className="font-bold text-primary">₦85M</p>
+                  <h3 className="text-xl font-bold text-gold">Modern Apartment</h3>
+                  <p className="font-bold text-gold">₦85M</p>
                 </div>
                 <div className="flex items-center text-muted-foreground mb-4">
                   <MapPin className="h-4 w-4 mr-1" />
@@ -235,8 +236,8 @@ export default function PropertiesPage() {
               </div>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold">Riverside Villa</h3>
-                  <p className="font-bold text-primary">₦15M/yr</p>
+                  <h3 className="text-xl font-bold text-gold">Riverside Villa</h3>
+                  <p className="font-bold text-gold">₦15M/yr</p>
                 </div>
                 <div className="flex items-center text-muted-foreground mb-4">
                   <MapPin className="h-4 w-4 mr-1" />
@@ -277,8 +278,8 @@ export default function PropertiesPage() {
               </div>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold">Family Townhouse</h3>
-                  <p className="font-bold text-primary">₦120M</p>
+                  <h3 className="text-xl font-bold text-gold">Family Townhouse</h3>
+                  <p className="font-bold text-gold">₦120M</p>
                 </div>
                 <div className="flex items-center text-muted-foreground mb-4">
                   <MapPin className="h-4 w-4 mr-1" />
@@ -319,8 +320,8 @@ export default function PropertiesPage() {
               </div>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold">Premium Office Space</h3>
-                  <p className="font-bold text-primary">₦8M/yr</p>
+                  <h3 className="text-xl font-bold text-gold">Premium Office Space</h3>
+                  <p className="font-bold text-gold">₦8M/yr</p>
                 </div>
                 <div className="flex items-center text-muted-foreground mb-4">
                   <MapPin className="h-4 w-4 mr-1" />
@@ -358,8 +359,8 @@ export default function PropertiesPage() {
               </div>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold">Eco-Friendly Home</h3>
-                  <p className="font-bold text-primary">₦180M</p>
+                  <h3 className="text-xl font-bold text-gold">Eco-Friendly Home</h3>
+                  <p className="font-bold text-gold">₦180M</p>
                 </div>
                 <div className="flex items-center text-muted-foreground mb-4">
                   <MapPin className="h-4 w-4 mr-1" />
@@ -404,12 +405,12 @@ export default function PropertiesPage() {
               </Button>
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Featured Property */}
-      <section className="py-16 bg-muted">
-        <div className="container">
+      <section className="py-16 bg-muted" id="featured">
+        <MaxWidthContent>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <Image
@@ -451,12 +452,12 @@ export default function PropertiesPage() {
               </Button>
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* CTA Section */}
       <section className="py-16">
-        <div className="container">
+        <MaxWidthContent>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Can't Find What You're Looking For?</h2>
             <p className="text-lg mb-8">
@@ -466,12 +467,12 @@ export default function PropertiesPage() {
               <Button size="lg" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" className="bg-gold hover:bg-gold" asChild>
                 <Link href="/properties/virtual-tours">Take a Virtual Tour</Link>
               </Button>
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
     </div>
   );
