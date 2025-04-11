@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { MapPin, Home, Building, Calendar, CheckCircle, Shield, Wifi, Droplet, Zap, Trees, Car, Dumbbell, School as Pool, Download } from "lucide-react";
+import MaxWidthContent from "@/components/maxWidthContent";
 
 export default function BeaconCityPage() {
   return (
@@ -22,30 +23,32 @@ export default function BeaconCityPage() {
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="container relative z-10 text-white">
-          <div className="max-w-3xl">
-            <Badge className="bg-primary text-primary-foreground mb-4">Featured Project</Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Beacon City Estate
-            </h1>
-            <p className="text-lg md:text-xl mb-8">
-              Our flagship luxury estate development, representing the pinnacle of modern living in Lagos.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-white text-black hover:bg-white/90">
-                Request Information
-              </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-                Schedule a Visit
-              </Button>
+        <MaxWidthContent>
+          <div className="relative z-10 text-white">
+            <div className="">
+              <Badge className="bg-primary text-primary-foreground mb-4">Featured Project</Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                Beacon City Estate
+              </h1>
+              <p className="text-lg md:text-xl mb-8">
+                Our flagship luxury estate development, representing the pinnacle of modern living in Lagos.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" className="bg-white text-black hover:bg-white/90">
+                  Request Information
+                </Button>
+                <Button size="lg" className="bg-gold text-white border-white hover:bg-white/10">
+                  Schedule a Visit
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Project Overview */}
       <section className="py-16">
-        <div className="container">
+        <MaxWidthContent>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
@@ -61,53 +64,53 @@ export default function BeaconCityPage() {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
-                  <Home className="h-8 w-8 text-primary mb-2" />
-                  <h3 className="font-semibold">120 Units</h3>
+                  <Home className="h-8 w-8 text-gold shrink-0 mb-2" />
+                  <h3 className="font-semibold text-gold">120 Units</h3>
                   <p className="text-sm text-muted-foreground">Luxury Residences</p>
                 </div>
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
-                  <MapPin className="h-8 w-8 text-primary mb-2" />
-                  <h3 className="font-semibold">Lekki, Lagos</h3>
+                  <MapPin className="h-8 w-8 text-gold shrink-0 mb-2" />
+                  <h3 className="font-semibold text-gold">Lekki, Lagos</h3>
                   <p className="text-sm text-muted-foreground">Prime Location</p>
                 </div>
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
-                  <Calendar className="h-8 w-8 text-primary mb-2" />
-                  <h3 className="font-semibold">2023-2026</h3>
+                  <Calendar className="h-8 w-8 text-gold shrink-0 mb-2" />
+                  <h3 className="font-semibold text-gold">2023-2026</h3>
                   <p className="text-sm text-muted-foreground">Development Period</p>
                 </div>
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
-                  <Building className="h-8 w-8 text-primary mb-2" />
-                  <h3 className="font-semibold">50 Acres</h3>
+                  <Building className="h-8 w-8 text-gold shrink-0 mb-2" />
+                  <h3 className="font-semibold text-gold">50 Acres</h3>
                   <p className="text-sm text-muted-foreground">Land Area</p>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-2 mb-8">
-                <Badge variant="outline" className="text-sm">Luxury Living</Badge>
-                <Badge variant="outline" className="text-sm">Smart Homes</Badge>
-                <Badge variant="outline" className="text-sm">Gated Community</Badge>
-                <Badge variant="outline" className="text-sm">Energy Efficient</Badge>
-                <Badge variant="outline" className="text-sm">Premium Finishes</Badge>
-                <Badge variant="outline" className="text-sm">24/7 Security</Badge>
+                <Badge variant="outline" className="text-sm bg-gold text-white">Luxury Living</Badge>
+                <Badge variant="outline" className="text-sm bg-gold text-white">Smart Homes</Badge>
+                <Badge variant="outline" className="text-sm bg-gold text-white">Gated Community</Badge>
+                <Badge variant="outline" className="text-sm bg-gold text-white">Energy Efficient</Badge>
+                <Badge variant="outline" className="text-sm bg-gold text-white">Premium Finishes</Badge>
+                <Badge variant="outline" className="text-sm bg-gold text-white">24/7 Security</Badge>
               </div>
 
               <div className="space-y-6">
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1" />
+                  <CheckCircle className="h-5 w-5 text-gold shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Strategic Location</h3>
                     <p>Situated in the heart of Lekki, with easy access to major highways, business districts, shopping centers, and international schools.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1" />
+                  <CheckCircle className="h-5 w-5 text-gold shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Architectural Excellence</h3>
                     <p>Contemporary designs that blend aesthetics with functionality, created by award-winning architects.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary mt-1" />
+                  <CheckCircle className="h-5 w-5 text-gold shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Investment Potential</h3>
                     <p>Strong appreciation prospects due to prime location and high-quality construction.</p>
@@ -160,12 +163,12 @@ export default function BeaconCityPage() {
               </Card>
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Gallery */}
       <section className="py-16 bg-muted">
-        <div className="container">
+        <MaxWidthContent>
           <h2 className="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative h-64 rounded-lg overflow-hidden">
@@ -217,24 +220,21 @@ export default function BeaconCityPage() {
               />
             </div>
           </div>
-          <div className="text-center mt-8">
-            <Button variant="outline" size="lg">View Full Gallery</Button>
-          </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Floor Plans */}
       <section className="py-16">
-        <div className="container">
+        <MaxWidthContent>
           <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
-          
+
           <Tabs defaultValue="villa" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-8">
               <TabsTrigger value="villa">Villa</TabsTrigger>
               <TabsTrigger value="townhouse">Townhouse</TabsTrigger>
               <TabsTrigger value="penthouse">Penthouse</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="villa">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="relative h-[400px] rounded-lg overflow-hidden border">
@@ -296,7 +296,7 @@ export default function BeaconCityPage() {
                 </div>
               </div>
             </TabsContent>
-            
+
             <TabsContent value="townhouse">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="relative h-[400px] rounded-lg overflow-hidden border">
@@ -358,7 +358,7 @@ export default function BeaconCityPage() {
                 </div>
               </div>
             </TabsContent>
-            
+
             <TabsContent value="penthouse">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="relative h-[400px] rounded-lg overflow-hidden border">
@@ -376,41 +376,41 @@ export default function BeaconCityPage() {
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
-                      <h4 className="font-semibold">Size</h4>
+                      <h4 className="font-semibold text-gold">Size</h4>
                       <p>450-550 sqm</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold">Bedrooms</h4>
+                      <h4 className="font-semibold text-gold">Bedrooms</h4>
                       <p>4</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold">Bathrooms</h4>
+                      <h4 className="font-semibold text-gold">Bathrooms</h4>
                       <p>5</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold">Garage</h4>
+                      <h4 className="font-semibold text-gold">Garage</h4>
                       <p>2 Cars</p>
                     </div>
                   </div>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
                       <span>Panoramic views</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
                       <span>Gourmet kitchen with premium appliances</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
                       <span>Private elevator access</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
                       <span>Spacious terrace</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
+                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
                       <span>Home automation system</span>
                     </div>
                   </div>
@@ -421,13 +421,13 @@ export default function BeaconCityPage() {
               </div>
             </TabsContent>
           </Tabs>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Amenities */}
       <section className="py-16 bg-muted">
-        <div className="container">
-          <h2 className="text-3xl font-bold mb-8 text-center">World-Class Amenities</h2>
+        <MaxWidthContent>
+          <h2 className="text-3xl font-bold mb-16 text-center">World-Class Amenities</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center">
               <Shield className="h-12 w-12 text-primary mb-4" />
@@ -470,12 +470,12 @@ export default function BeaconCityPage() {
               <p className="text-sm text-muted-foreground">Uninterrupted power supply with backup generators and solar options.</p>
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Location */}
       <section className="py-16">
-        <div className="container">
+        <MaxWidthContent>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">Strategic Location</h2>
@@ -484,23 +484,23 @@ export default function BeaconCityPage() {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
-                  <Car className="h-5 w-5 text-primary mt-1" />
+                  <Car className="h-5 w-5 text-gold shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold">Excellent Connectivity</h3>
+                    <h3 className="font-semibold text-gold">Excellent Connectivity</h3>
                     <p>15 minutes to Lekki-Epe Expressway, 25 minutes to Victoria Island, 45 minutes to Murtala Muhammed International Airport.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Building className="h-5 w-5 text-primary mt-1" />
+                  <Building className="h-5 w-5 text-gold shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold">Nearby Amenities</h3>
+                    <h3 className="font-semibold text-gold">Nearby Amenities</h3>
                     <p>5 minutes to shopping malls, 10 minutes to international schools, 15 minutes to hospitals and medical centers.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary mt-1" />
+                  <MapPin className="h-5 w-5 text-gold shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold">Neighborhood</h3>
+                    <h3 className="font-semibold text-gold">Neighborhood</h3>
                     <p>Situated in an established residential area with other premium developments and expatriate communities.</p>
                   </div>
                 </div>
@@ -516,15 +516,15 @@ export default function BeaconCityPage() {
               />
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* Payment Plans */}
       <section className="py-16 bg-muted">
-        <div className="container">
+        <MaxWidthContent>
           <h2 className="text-3xl font-bold mb-8 text-center">Payment Plans</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card>
+            <Card className="border-primary">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center">Outright Payment</h3>
                 <div className="text-center mb-6">
@@ -549,13 +549,12 @@ export default function BeaconCityPage() {
                     <span>Customization options</span>
                   </li>
                 </ul>
-                <Button className="w-full">Choose This Plan</Button>
               </CardContent>
             </Card>
 
-            <Card className="border-primary">
+            <Card className="border-gold">
               <CardContent className="p-6">
-                <div className="bg-primary text-primary-foreground text-center py-1 px-4 rounded-full text-sm font-medium mb-4 mx-auto w-fit">
+                <div className="bg-gold text-primary-foreground text-center py-1 px-4 rounded-full text-sm font-medium mb-4 mx-auto w-fit">
                   Most Popular
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-center">Installment Plan</h3>
@@ -581,11 +580,10 @@ export default function BeaconCityPage() {
                     <span>Flexible payment schedule</span>
                   </li>
                 </ul>
-                <Button className="w-full">Choose This Plan</Button>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border-primary">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center">Mortgage Option</h3>
                 <div className="text-center mb-6">
@@ -610,19 +608,18 @@ export default function BeaconCityPage() {
                     <span>Competitive interest rates</span>
                   </li>
                 </ul>
-                <Button className="w-full">Choose This Plan</Button>
               </CardContent>
             </Card>
           </div>
           <p className="text-center mt-8 text-muted-foreground">
             Contact our sales team for more information about payment plans and financing options.
           </p>
-        </div>
+        </MaxWidthContent>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container">
+      <section className="py-16 bg-primary text-primary-foreground border-b border-gold">
+        <MaxWidthContent>
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Secure Your Place in Beacon City Estate</h2>
             <p className="text-lg mb-8">
@@ -632,12 +629,12 @@ export default function BeaconCityPage() {
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/contact">Contact Sales Team</Link>
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+              <Button size="lg" className="bg-gold text-white border-white hover:bg-white/10">
                 Download Brochure
               </Button>
             </div>
           </div>
-        </div>
+        </MaxWidthContent>
       </section>
     </div>
   );
