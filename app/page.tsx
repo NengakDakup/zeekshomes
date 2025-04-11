@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Building, Home as HomeIcon, Briefcase, Award, Users, MoveRight, Search } from "lucide-react";
+import { ArrowRight, Building, Home as HomeIcon, Briefcase, Award, Users, MoveRight, Search, ChevronsRight } from "lucide-react";
 import MaxWidthContent from "@/components/maxWidthContent";
 
 const itemsList = [
@@ -251,38 +251,44 @@ export default function Home() {
       <section className="py-16 bg-muted">
         <MaxWidthContent>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="flex-col gap-4">
               <h2 className="text-3xl font-bold mb-6">About Zeeks Homes</h2>
               <p className="text-lg mb-6">
                 Since 2010, Zeeks Homes has been at the forefront of real estate development in Nigeria, delivering exceptional properties that combine innovative design, quality construction, and sustainable practices.
               </p>
-              <p className="mb-8">
-                Our mission is to create living and working spaces that enhance the quality of life for our clients while contributing positively to the communities we build in.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-8">
+              <div className="border-l-4 border-gold pl-4">
+                <p className="text-gold font-black italic text-lg">Our Mission</p>
+                <p>Our mission is to redefine the standards of urban living by delivering exceptional real estate solutions that surpass every expectation, elevate lifestyles, and foster enduring value.</p>
+              </div>
+              <div className="border-l-4 border-gold pl-4 mt-4">
+                <p className="text-gold font-black italic text-lg">Our Vision</p>
+                <p>Our vision is to Transform Nigeria housing sector through innovative and sustainable real estate development.</p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6 mb-8 mt-8">
                 <div className="flex items-start gap-3">
-                  <Building className="h-6 w-6 text-primary mt-1" />
+                  <Building className="h-6 w-6 text-gold mt-1" />
                   <div>
                     <h3 className="font-semibold">50+ Projects</h3>
                     <p className="text-sm text-muted-foreground">Completed nationwide</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <HomeIcon className="h-6 w-6 text-primary mt-1" />
+                  <HomeIcon className="h-6 w-6 text-gold mt-1" />
                   <div>
                     <h3 className="font-semibold">1,200+ Homes</h3>
                     <p className="text-sm text-muted-foreground">Delivered to happy clients</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Users className="h-6 w-6 text-primary mt-1" />
+                  <Users className="h-6 w-6 text-gold mt-1" />
                   <div>
                     <h3 className="font-semibold">200+ Employees</h3>
                     <p className="text-sm text-muted-foreground">Dedicated professionals</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Award className="h-6 w-6 text-primary mt-1" />
+                  <Award className="h-6 w-6 text-gold mt-1" />
                   <div>
                     <h3 className="font-semibold">15+ Awards</h3>
                     <p className="text-sm text-muted-foreground">For excellence in real estate</p>
@@ -290,12 +296,12 @@ export default function Home() {
                 </div>
               </div>
               <Button asChild>
-                <Link href="/about">Learn More About Us</Link>
+                <Link href="/about">Learn More About Us <MoveRight className="ml-2 w-5 h-5" /> </Link>
               </Button>
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                src="/images/gs-apartments.png"
                 alt="Zeeks Homes Office"
                 fill
                 style={{ objectFit: "cover" }}
@@ -315,56 +321,43 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="text-center p-6">
               <div className="flex justify-center mb-4">
-                <Building className="h-12 w-12 text-primary" />
+                <Building className="h-12 w-12 text-gold" />
               </div>
               <h3 className="text-xl font-bold mb-2">Residential Development</h3>
               <p className="text-muted-foreground mb-4">
-                Premium homes designed for modern living, from apartments to luxury villas.
+                At Zeeks Homes, we specialize in creating modern, sustainable, and luxurious living spaces that cater to diverse lifestyles.
               </p>
               <Button variant="outline" asChild>
-                <Link href="/services#residential">Learn More</Link>
+                <Link href="/services#residential" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>
               </Button>
             </Card>
 
             <Card className="text-center p-6">
               <div className="flex justify-center mb-4">
-                <Briefcase className="h-12 w-12 text-primary" />
+                <Briefcase className="h-12 w-12 text-gold" />
               </div>
               <h3 className="text-xl font-bold mb-2">Commercial Development</h3>
               <p className="text-muted-foreground mb-4">
-                Office spaces, retail centers, and mixed-use developments for businesses.
+                Development Our commercial development services focus on creating state-of-the-art properties that offer optimal functionality and aesthetic appeal.
               </p>
               <Button variant="outline" asChild>
-                <Link href="/services#commercial">Learn More</Link>
+                <Link href="/services#commercial" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>
               </Button>
             </Card>
 
             <Card className="text-center p-6">
               <div className="flex justify-center mb-4">
-                <HomeIcon className="h-12 w-12 text-primary" />
+                <HomeIcon className="h-12 w-12 text-gold" />
               </div>
               <h3 className="text-xl font-bold mb-2">Property Management</h3>
               <p className="text-muted-foreground mb-4">
-                Comprehensive management services for residential and commercial properties.
+                Zeeks Homes offers comprehensive property management services designed to ensure the seamless operation and maintenance of properties.
               </p>
               <Button variant="outline" asChild>
-                <Link href="/services#management">Learn More</Link>
-              </Button>
-            </Card>
-
-            <Card className="text-center p-6">
-              <div className="flex justify-center mb-4">
-                <Users className="h-12 w-12 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Custom Builds</h3>
-              <p className="text-muted-foreground mb-4">
-                Bespoke homes tailored to your specific requirements and preferences.
-              </p>
-              <Button variant="outline" asChild>
-                <Link href="/services#custom">Learn More</Link>
+                <Link href="/services#management" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>
               </Button>
             </Card>
           </div>
@@ -495,7 +488,7 @@ export default function Home() {
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
                   <span>April 15, 2025</span>
                   <span className="mx-2">•</span>
-                  <span>Real Estate Trends</span>
+                  <span className="text-gold">Real Estate Trends</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">The Future of Real Estate in Nigeria</h3>
                 <p className="text-muted-foreground mb-4">
@@ -522,7 +515,7 @@ export default function Home() {
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
                   <span>April 8, 2025</span>
                   <span className="mx-2">•</span>
-                  <span>Investment Tips</span>
+                  <span className="text-gold">Investment Tips</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">5 Tips for First-Time Property Investors</h3>
                 <p className="text-muted-foreground mb-4">
@@ -549,7 +542,7 @@ export default function Home() {
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
                   <span>April 1, 2025</span>
                   <span className="mx-2">•</span>
-                  <span>Home Improvement</span>
+                  <span className="text-gold">Home Improvement</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2">Sustainable Features That Add Value to Your Home</h3>
                 <p className="text-muted-foreground mb-4">
