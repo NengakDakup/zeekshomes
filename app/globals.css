@@ -1,3 +1,6 @@
+/* /styles/globals.css */
+@import './fonts.css'; /* Import the font-face definitions */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,6 +29,7 @@
     --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
+    --gold: 33, 63%, 45%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -78,5 +82,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply font-segma;
   }
 }

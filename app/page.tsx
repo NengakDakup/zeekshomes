@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Building, Home as HomeIcon, Briefcase, Award, Users } from "lucide-react";
+import { ArrowRight, Building, Home as HomeIcon, Briefcase, Award, Users, MoveRight, Search } from "lucide-react";
 import MaxWidthContent from "@/components/maxWidthContent";
 
 const itemsList = [
@@ -33,7 +33,7 @@ const itemsList = [
   {
     image: "/images/beacon.png",
     content: <div className="max-w-3xl mb-10">
-      <div className="border border-white p-2 px-4 w-fit mb-3 text-xs">
+      <div className="border border-white p-1 bg-gold font-bold w-fit mb-3 text-xs">
         ONGOING PROJECT
       </div>
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -43,7 +43,7 @@ const itemsList = [
         One of our most notable ongoing projects is Beacon City, an estate located at Pyakasa Lugbe, Abuja. This project consists of 14 plots of 300 sqm semi-detached houses and 5 plots of a 500 sqm fully detached house.      </p>
       <div className="flex flex-wrap gap-4">
         <Button size="lg" className="border border-white bg-white text-black hover:text-white" asChild>
-          <Link href="/properties">Learn More</Link>
+          <Link href="/properties">Learn More <MoveRight className="ml-1" /> </Link>
         </Button>
       </div>
     </div>
@@ -126,7 +126,7 @@ export default function Home() {
                       </Select>
                     </div>
                     <div className="flex items-end">
-                      <Button className="w-full">Search Properties</Button>
+                      <Button className="w-full bg-gold">Search Properties <Search className="w-5 h-5 ml-2" /></Button>
                     </div>
                   </div>
                 </div>
@@ -173,14 +173,14 @@ export default function Home() {
                 <Badge className="absolute top-4 left-4 bg-primary">Featured</Badge>
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">Beacon City Estate</h3>
+                <h3 className="text-xl font-black mb-2 text-gold">Beacon City Estate</h3>
                 <p className="text-muted-foreground mb-4">
                   Our flagship luxury estate with premium amenities and 24/7 security.
                 </p>
                 <div className="flex justify-between items-center">
-                  <span className="font-semibold">From ₦120M</span>
+                  <span className="font-semibold">From <span className="text-gold font-bold">₦120M</span></span>
                   <Button variant="outline" size="sm" asChild>
-                    <Link href="/projects/beacon-city">View Details</Link>
+                    <Link href="/projects/beacon-city">View Details <MoveRight className="w-5 h-5 ml-1" /> </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -198,14 +198,14 @@ export default function Home() {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">Palm Heights</h3>
+                <h3 className="text-xl font-black mb-2 text-gold">Palm Heights</h3>
                 <p className="text-muted-foreground mb-4">
                   Modern apartments with stunning views and resort-style facilities.
                 </p>
                 <div className="flex justify-between items-center">
-                  <span className="font-semibold">From ₦85M</span>
+                  <span className="font-semibold">From <span className="text-gold font-bold">₦85M</span></span>
                   <Button variant="outline" size="sm" asChild>
-                    <Link href="/projects/palm-heights">View Details</Link>
+                    <Link href="/projects/palm-heights">View Details <MoveRight className="w-5 h-5 ml-1" /> </Link>
                   </Button>
                 </div>
               </CardContent>
@@ -223,14 +223,14 @@ export default function Home() {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">Riverside Villas</h3>
+                <h3 className="text-xl font-black mb-2 text-gold">Riverside Villas</h3>
                 <p className="text-muted-foreground mb-4">
                   Exclusive waterfront villas with private gardens and boat access.
                 </p>
                 <div className="flex justify-between items-center">
-                  <span className="font-semibold">From ₦180M</span>
+                  <span className="font-semibold">From <span className="text-gold font-bold">₦180M</span></span>
                   <Button variant="outline" size="sm" asChild>
-                    <Link href="/projects/riverside-villas">View Details</Link>
+                    <Link href="/projects/riverside-villas">View Details <MoveRight className="w-5 h-5 ml-1" /> </Link>
                   </Button>
                 </div>
               </CardContent>

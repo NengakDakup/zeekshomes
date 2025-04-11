@@ -1,0 +1,145 @@
+/* /styles/fonts.css */
+
+/* Regular */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-Regular-BF654d990a3279a.woff') format('woff');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular Italic */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-RegularItalic-BF654d990a11f54.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Thin */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-Thin-BF654d990a32597.woff') format('woff');
+  font-weight: 100; /* Thin */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Thin Italic */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-ThinItalic-BF654d990a24f62.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ExtraLight */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-ExtraLight-BF654d9909e41a1.woff') format('woff');
+  font-weight: 200; /* ExtraLight */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ExtraLight Italic */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-ExtraLightItalic-BF654d990a363d3.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-Light-BF654d990a3c0f6.woff') format('woff');
+  font-weight: 300; /* Light */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light Italic */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-LightItalic-BF654d990a01834.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-Medium-BF654d9909e2529.woff') format('woff');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium Italic */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-MediumItalic-BF654d990a246aa.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-SemiBold-BF654d990a3d889.woff') format('woff');
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SemiBold Italic */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-SemiBoldItalic-BF654d990a21059.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-Bold-BF654d9909ed277.woff') format('woff');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-BoldItalic-BF654d990a340f9.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-Black-BF654d99091e5a2.woff') format('woff');
+  font-weight: 900; /* Black */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Black Italic */
+@font-face {
+  font-family: 'BR Segma';
+  src: url('/fonts/br-segma-webfont/BRSegma-BlackItalic-BF654d9909bba02.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
