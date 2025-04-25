@@ -24,7 +24,7 @@ export default function ServicesPage() {
       {/* Services Overview */}
       <section className="py-16">
         <MaxWidthContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Residential Development */}
             <Card className="relative overflow-hidden group">
               <div className="absolute inset-0 bg-black/60 z-10" />
@@ -99,6 +99,31 @@ export default function ServicesPage() {
                 </Button>
               </CardContent>
             </Card>
+
+            {/* Mixed-Use Development */}
+            <Card className="relative overflow-hidden group">
+              <div className="absolute inset-0 bg-black/60 z-10" />
+              <div className="relative h-[300px]">
+                <Image
+                  src="/images/mixed-use.png"
+                  alt="Mixed-Use Development"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <CardContent className="relative z-20 p-6 -mt-20 text-white">
+                <div className="flex justify-center mb-4">
+                  <Building className="h-12 w-12 text-gold" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-center">Mixed-Use Development</h3>
+                <p className="text-sm text-center mb-4">
+                  Creating vibrant integrated communities for living, working, and recreation.
+                </p>
+                <Button className="w-full border-white text-white bg-gold hover:bg-white hover:text-black" asChild>
+                  <Link href="#mixed-use">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </MaxWidthContent>
       </section>
@@ -113,7 +138,7 @@ export default function ServicesPage() {
                 <Badge className="bg-gold mb-4">Residential Development</Badge>
                 <h2 className="text-3xl font-bold mb-6">Creating Exceptional Living Spaces</h2>
                 <p className="text-lg mb-8">
-                  Our residential developments set new standards in luxury living, combining innovative design with superior craftsmanship to create homes that inspire and delight.
+                  At Zeeks Homes, we specialize in creating modern, sustainable, and luxurious living spaces that cater to diverse lifestyles. Our residential projects are designed with the utmost attention to detail, ensuring that every home we build meets the highest standards of quality and comfort. We incorporate the latest architectural trends and innovative technologies to deliver homes that are not only aesthetically pleasing but also energy-efficient and environmentally friendly. Our developments range from single-family homes to multi-unit complexes, each thoughtfully planned to provide residents with a harmonious living environment that enhances their overall quality of life.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
@@ -166,7 +191,7 @@ export default function ServicesPage() {
                 <Badge className="bg-gold mb-4">Commercial Development</Badge>
                 <h2 className="text-3xl font-bold mb-6">Building Business Success</h2>
                 <p className="text-lg mb-8">
-                  Our commercial developments are designed to provide the perfect environment for businesses to thrive, with strategic locations and modern amenities.
+                  Our commercial development services focus on creating state-of-the-art properties that offer optimal functionality and aesthetic appeal. We understand the unique requirements of businesses and design commercial spaces that foster productivity, collaboration, and growth. From office buildings and retail centers to industrial facilities and mixed-use developments, we utilize cutting-edge design principles and sustainable construction practices to deliver projects that stand out in the market. Our commercial properties are strategically located to maximize accessibility and visibility, providing our clients with a competitive edge in their respective industries.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
@@ -203,7 +228,7 @@ export default function ServicesPage() {
                 <Badge className="bg-gold mb-4">Property Management</Badge>
                 <h2 className="text-3xl font-bold mb-6">Professional Property Management</h2>
                 <p className="text-lg mb-8">
-                  Our property management services ensure your investment is well-maintained and optimized for maximum returns.
+                  Zeeks Homes offers comprehensive property management services designed to ensure the seamless operation and maintenance of properties. Our property management team is dedicated to maximizing the value and performance of each property under our care. We provide a full suite of services, including tenant relations, lease administration, maintenance and repairs, financial management, and compliance with local regulations. Our proactive approach to property management ensures that issues are addressed promptly, and properties are maintained to the highest standards, resulting in satisfied tenants and owners.
                 </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
@@ -236,6 +261,51 @@ export default function ServicesPage() {
                 <Image
                   src="/images/beacon.png"
                   alt="Property Management"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </div>
+
+            {/* Mixed-Use Development */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="mixed-use">
+              <div>
+                <Badge className="bg-gold mb-4">Mixed-Use Development</Badge>
+                <h2 className="text-3xl font-bold mb-6">Integrated Community Living</h2>
+                <p className="text-lg mb-8">
+                  Our mixed-use developments are designed to create integrated communities that combine residential, commercial, and recreational spaces, enhancing the quality of urban life. By blending different types of properties within a single development, we create vibrant neighborhoods that offer convenience, accessibility, and a sense of community. Our mixed-use projects feature thoughtfully planned layouts that encourage interaction and connectivity, providing residents and businesses with a dynamic environment that meets their diverse needs. These developments are equipped with modern amenities and infrastructure, making them desirable places to live, work, and play.
+                </p>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-gold shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold">Residential Units</h4>
+                      <p>Modern apartments and homes with premium amenities</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-gold shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold">Commercial Spaces</h4>
+                      <p>Retail and office spaces designed for business success</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-gold shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-semibold">Recreational Areas</h4>
+                      <p>Parks, gyms, and community centers for a balanced lifestyle</p>
+                    </div>
+                  </div>
+                </div>
+                <Button asChild>
+                  <Link href="/projects">Explore Our Mixed-Use Projects <MoveRight className="ml-2 h-5 w-5" /></Link>
+                </Button>
+              </div>
+              <div className="relative h-[500px] rounded-lg overflow-hidden">
+                <Image
+                  src="/images/mixed-use.png"
+                  alt="Mixed-Use Development"
                   fill
                   style={{ objectFit: "cover" }}
                 />

@@ -21,15 +21,15 @@ export default function Footer() {
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
-                  <span>123 Victoria Island, Lagos, Nigeria</span>
+                  <span>Novare Central Office, Dabala Crescent Wuse Zone 5 Abuja</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  <span>+234 123 456 7890</span>
+                  <span>09125555510, 09125555512</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  <span>info@zeekshomes.com</span>
+                  <span>sales@zeekshomes.ng</span>
                 </div>
               </div>
             </div>

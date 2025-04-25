@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Award, Users, Building, CheckCircle, Leaf, Heart, Target, Clock, ChevronsDown } from "lucide-react";
+import { Award, Users, Building, CheckCircle, Leaf, Heart, Target, Clock, ChevronsDown, Shield } from "lucide-react";
 import MaxWidthContent from "@/components/maxWidthContent";
 import BlogPreview from "@/components/BlogPreview";
 
@@ -48,13 +48,10 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-lg mb-6">
-                Zeeks Homes was founded in 2010 by Adebayo Zeeks, a visionary entrepreneur with a passion for creating exceptional living spaces. What began as a small real estate venture has grown into one of Nigeria's most respected property development companies.
+                Incorporated in 2022, Zeeks Homes leverages the extensive experience and resources of Zeeks Group to focus exclusively on the real estate and property management sector. Our portfolio includes residential, commercial, and mixed-use developments, all designed to enhance urban living and deliver long-term value to our clients and investors.
               </p>
               <p className="mb-6">
-                Over the past decade, we have successfully delivered over 50 projects across Nigeria, ranging from luxury residential estates to commercial complexes and mixed-use developments. Our commitment to quality, innovation, and customer satisfaction has earned us a reputation for excellence in the real estate industry.
-              </p>
-              <p className="mb-6">
-                Today, Zeeks Homes continues to push boundaries in architectural design, sustainable building practices, and community development. Our team of experienced professionals works tirelessly to create properties that not only meet but exceed our clients' expectations.
+                Our commitment to quality, innovation, and customer satisfaction has earned us a reputation for excellence in the real estate industry. Today, Zeeks Homes continues to push boundaries in architectural design, sustainable building practices, and community development.
               </p>
             </div>
           </div>
@@ -107,7 +104,14 @@ export default function AboutPage() {
             </TabsContent>
             <TabsContent value="values" className="mt-6 p-6 bg-background rounded-lg shadow border-l-4 border-r-4 border-gold">
               <h3 className="text-xl font-bold mb-4 text-gold">Our Core Values</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <Shield className="h-6 w-6 text-gold mt-1 shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-gold">Integrity</h3>
+                    <p>We conduct ourselves with honesty, transparency, and accountability, fostering trust among our stakeholders.</p>
+                  </div>
+                </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-gold mt-1" />
                   <div>

@@ -47,7 +47,7 @@ const ContactPage = () => {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Let's Start a Conversation</h1>
             <p className="text-lg text-gray-600">
-              Have questions about our properties or services? We're here to help you find your perfect home.
+              Whether you're looking for your dream home or interested in our services, our team is ready to assist you.
             </p>
           </motion.div>
         </MaxWidthContent>
@@ -78,7 +78,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-muted-foreground">+234 123 456 7890</p>
+                      <p className="text-muted-foreground">09125555510, 09125555512</p>
                     </div>
                   </motion.div>
 
@@ -91,7 +91,8 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">contact@zeekshomes.com</p>
+                      <p className="text-muted-foreground">sales@zeekshomes.ng</p>
+                      <p className="text-muted-foreground">info@zeekshomes.ng</p>
                     </div>
                   </motion.div>
 
@@ -104,7 +105,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-medium">Address</p>
-                      <p className="text-muted-foreground">123 Victoria Island, Lagos, Nigeria</p>
+                      <p className="text-muted-foreground">Novare Central Office, Dabala Crescent Wuse Zone 5 Abuja</p>
                     </div>
                   </motion.div>
                 </div>
@@ -173,7 +174,7 @@ const ContactPage = () => {
             className="mt-24 rounded-xl overflow-hidden border shadow-lg"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7277813548837!2d3.4246303!3d6.4280556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf53280e7648d%3A0x4c088a49c17449c!2sVictoria%20Island%2C%20Lagos!5e0!3m2!1sen!2sng!4v1701683394949!5m2!1sen!2sng"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8766304233657!2d7.4726721!3d9.0733397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0ba3302a3c37%3A0x2f3c1e8f8f6c9e82!2sNovare%20Central%20Wuse%20Zone%205!5e0!3m2!1sen!2sng!4v1701683394949!5m2!1sen!2sng"
               width="100%"
               height="500"
               style={{ border: 0 }}

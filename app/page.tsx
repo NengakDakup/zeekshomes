@@ -19,7 +19,7 @@ const itemsList = [
         Building Dreams, Creating Communities
       </h1>
       <p className="text-md md:text-lg mb-8">
-        Zeeks Homes is Nigeria's premier real estate developer, creating exceptional living and working spaces that stand the test of time.
+        Zeeks Homes, a distinguished subsidiary of the renowned Zeeks Group of Companies, stands as a beacon of excellence in real estate innovation.
       </p>
       <div className="flex flex-wrap gap-4">
         <Button size="lg" className="border border-white bg-white text-black hover:text-white" asChild>
@@ -255,15 +255,12 @@ export default function Home() {
             <div className="flex-col gap-4">
               <h2 className="text-3xl font-bold mb-6">About Zeeks Homes</h2>
               <p className="text-lg mb-6">
-                Since 2010, Zeeks Homes has been at the forefront of real estate development in Nigeria, delivering exceptional properties that combine innovative design, quality construction, and sustainable practices.
+                Since 2022, Zeeks Homes has been at the forefront of real estate development in Nigeria, delivering exceptional properties that combine innovative design, quality construction, and sustainable practices.
               </p>
               <div className="border-l-4 border-gold pl-4">
                 <p className="text-gold font-black italic text-lg">Our Mission</p>
-                <p>Our mission is to redefine the standards of urban living by delivering exceptional real estate solutions that surpass every expectation, elevate lifestyles, and foster enduring value.</p>
-              </div>
-              <div className="border-l-4 border-gold pl-4 mt-4">
-                <p className="text-gold font-black italic text-lg">Our Vision</p>
-                <p>Our vision is to Transform Nigeria housing sector through innovative and sustainable real estate development.</p>
+                <p className="text-muted-foreground">
+                  At Zeeks Homes, our mission is to redefine the standards of urban living by delivering exceptional real estate solutions that surpass every expectation, elevate lifestyles, and foster enduring value. Through a steadfast dedication to integrity, innovation, and sustainability, we endeavor to create environments that inspire, enrich, and endure for generations to come.                </p>
               </div>
 
               <div className="grid grid-cols-2 gap-6 mb-8 mt-8">
@@ -329,7 +326,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-2">Residential Development</h3>
               <p className="text-muted-foreground mb-4">
-                At Zeeks Homes, we specialize in creating modern, sustainable, and luxurious living spaces that cater to diverse lifestyles.
+                At Zeeks Homes, we specialize in creating modern, sustainable, and luxurious living spaces that cater to diverse lifestyles. Our residential projects are designed with the utmost attention to detail, ensuring that every home we build meets the highest standards of quality and comfort. We incorporate the latest architectural trends and innovative technologies to deliver homes that are not only aesthetically pleasing but also energy-efficient and environmentally friendly. Our developments range from single-family homes to multi-unit complexes, each thoughtfully planned to provide residents with a harmonious living environment that enhances their overall quality of life.
               </p>
               <Button variant="outline" asChild>
                 <Link href="/services#residential" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>
@@ -342,7 +339,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-2">Commercial Development</h3>
               <p className="text-muted-foreground mb-4">
-                Development Our commercial development services focus on creating state-of-the-art properties that offer optimal functionality and aesthetic appeal.
+                Our commercial development services focus on creating state-of-the-art properties that offer optimal functionality and aesthetic appeal. We understand the unique requirements of businesses and design commercial spaces that foster productivity, collaboration, and growth. From office buildings and retail centers to industrial facilities and mixed-use developments, we utilize cutting-edge design principles and sustainable construction practices to deliver projects that stand out in the market. Our commercial properties are strategically located to maximize accessibility and visibility, providing our clients with a competitive edge in their respective industries.
               </p>
               <Button variant="outline" asChild>
                 <Link href="/services#commercial" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>
@@ -355,7 +352,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-2">Property Management</h3>
               <p className="text-muted-foreground mb-4">
-                Zeeks Homes offers comprehensive property management services designed to ensure the seamless operation and maintenance of properties.
+                Zeeks Homes offers comprehensive property management services designed to ensure the seamless operation and maintenance of properties. Our property management team is dedicated to maximizing the value and performance of each property under our care. We provide a full suite of services, including tenant relations, lease administration, maintenance and repairs, financial management, and compliance with local regulations. Our proactive approach to property management ensures that issues are addressed promptly, and properties are maintained to the highest standards, resulting in satisfied tenants and owners.
               </p>
               <Button variant="outline" asChild>
                 <Link href="/services#management" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>

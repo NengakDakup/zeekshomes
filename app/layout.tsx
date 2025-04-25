@@ -6,7 +6,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'Zeeks Homes | Premium Real Estate Developer',
-  description: 'Zeeks Homes is a leading real estate developer in Nigeria, specializing in residential and commercial properties.',
+  description: 'Zeeks Homes, a distinguished subsidiary of Zeeks Group of Companies, specializes in residential, commercial, and mixed-use developments with a focus on sustainability and innovation.',
 };
 
 export default function RootLayout({
