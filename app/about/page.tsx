@@ -69,10 +69,9 @@ export default function AboutPage() {
           </div>
 
           <Tabs defaultValue="mission" className="max-w-4xl mx-auto">
-            <TabsList className="grid w-full grid-cols-3">
+            <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="mission">Mission</TabsTrigger>
-              <TabsTrigger value="vision">Vision</TabsTrigger>
-              <TabsTrigger value="values">Values</TabsTrigger>
+              <TabsTrigger value="values">Core Values</TabsTrigger>
             </TabsList>
             <TabsContent value="mission" className="mt-6 p-6 bg-background rounded-lg shadow border-l-4 border-r-4 border-gold">
               <div className="flex items-start gap-4">
@@ -84,20 +83,6 @@ export default function AboutPage() {
                   </p>
                   <p className="text-lg mt-2">
                     Through innovative design, sustainable practices, and unwavering commitment to quality, we aim to create spaces that inspire and transform communities while setting new benchmarks in the real estate industry.
-                  </p>
-                </div>
-              </div>
-            </TabsContent>
-            <TabsContent value="vision" className="mt-6 p-6 bg-background rounded-lg shadow border-l-4 border-r-4 border-gold">
-              <div className="flex items-start gap-4">
-                <Building className="h-12 w-12 text-gold flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-4 text-gold">Our Vision</h3>
-                  <p className="text-lg">
-                    Our vision is to Transform Nigeria housing sector through innovative and sustainable real estate development.
-                  </p>
-                  <p className="text-lg mt-2">
-                    We aim to be the leading force in creating modern, sustainable communities that enhance quality of life while setting new standards for excellence in the African real estate market.
                   </p>
                 </div>
               </div>

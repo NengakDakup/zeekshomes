@@ -319,14 +319,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="text-center p-6">
               <div className="flex justify-center mb-4">
                 <Building className="h-12 w-12 text-gold" />
               </div>
               <h3 className="text-xl font-bold mb-2">Residential Development</h3>
               <p className="text-muted-foreground mb-4">
-                At Zeeks Homes, we specialize in creating modern, sustainable, and luxurious living spaces that cater to diverse lifestyles. Our residential projects are designed with the utmost attention to detail, ensuring that every home we build meets the highest standards of quality and comfort. We incorporate the latest architectural trends and innovative technologies to deliver homes that are not only aesthetically pleasing but also energy-efficient and environmentally friendly. Our developments range from single-family homes to multi-unit complexes, each thoughtfully planned to provide residents with a harmonious living environment that enhances their overall quality of life.
+                We create modern, sustainable luxury homes with attention to detail. Our projects range from single-family homes to multi-unit complexes, featuring innovative design and energy-efficient solutions.
               </p>
               <Button variant="outline" asChild>
                 <Link href="/services#residential" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>
@@ -339,7 +339,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-2">Commercial Development</h3>
               <p className="text-muted-foreground mb-4">
-                Our commercial development services focus on creating state-of-the-art properties that offer optimal functionality and aesthetic appeal. We understand the unique requirements of businesses and design commercial spaces that foster productivity, collaboration, and growth. From office buildings and retail centers to industrial facilities and mixed-use developments, we utilize cutting-edge design principles and sustainable construction practices to deliver projects that stand out in the market. Our commercial properties are strategically located to maximize accessibility and visibility, providing our clients with a competitive edge in their respective industries.
+                Specializing in state-of-the-art commercial properties including offices, retail centers, and industrial facilities. We focus on strategic locations and sustainable practices to deliver competitive business spaces.
               </p>
               <Button variant="outline" asChild>
                 <Link href="/services#commercial" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>
@@ -352,10 +352,23 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-2">Property Management</h3>
               <p className="text-muted-foreground mb-4">
-                Zeeks Homes offers comprehensive property management services designed to ensure the seamless operation and maintenance of properties. Our property management team is dedicated to maximizing the value and performance of each property under our care. We provide a full suite of services, including tenant relations, lease administration, maintenance and repairs, financial management, and compliance with local regulations. Our proactive approach to property management ensures that issues are addressed promptly, and properties are maintained to the highest standards, resulting in satisfied tenants and owners.
+                Our comprehensive management services include tenant relations, maintenance, financial management, and regulatory compliance. We ensure smooth operations and maximum value for property owners.
               </p>
               <Button variant="outline" asChild>
                 <Link href="/services#management" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>
+              </Button>
+            </Card>
+
+            <Card className="text-center p-6">
+              <div className="flex justify-center mb-4">
+                <Building className="h-12 w-12 text-gold" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Mixed-Use Development</h3>
+              <p className="text-muted-foreground mb-4">
+                Creating integrated communities that combine residential, commercial, and recreational spaces. Our developments feature modern amenities and thoughtful layouts to enhance urban living.
+              </p>
+              <Button variant="outline" asChild>
+                <Link href="/services#mixed-use" className="text-gold">Learn More <ChevronsRight className="ml-1 w-5 h-5" /> </Link>
               </Button>
             </Card>
           </div>
