@@ -1,4 +1,5 @@
 'use client'
+import { useState, useEffect } from 'react'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,64 +10,7 @@ import { Input } from '@/components/ui/input'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import MaxWidthContent from '@/components/maxWidthContent'
-
-const blogPosts = [
-  {
-    id: 1,
-    title: 'The Future of Real Estate in Nigeria',
-    excerpt: 'Exploring emerging trends and opportunities in Nigeria\'s dynamic property market.',
-    image: '/images/beacon.png',
-    category: 'Market Trends',
-    date: 'December 10, 2023',
-    author: 'John Doe'
-  },
-  // Add more blog posts here
-  {
-    id: 2,
-    title: 'Investment Opportunities in Lagos Real Estate',
-    excerpt: 'A detailed analysis of prime investment locations and properties in Lagos.',
-    image: '/images/gs-apartments.png',
-    category: 'Investment Tips',
-    date: 'December 8, 2023',
-    author: 'Jane Smith'
-  },
-  {
-    id: 3,
-    title: "First-Time Home Buyer's Guide",
-    excerpt: 'Essential tips and considerations for purchasing your first property in Nigeria.',
-    image: '/images/beacon.png',
-    category: 'Property Guides',
-    date: 'December 5, 2023',
-    author: 'Michael Johnson'
-  },
-  {
-    id: 4,
-    title: 'Zeeks Properties Launches New Development',
-    excerpt: 'Announcing our latest luxury residential project in Victoria Island.',
-    image: '/images/gs-apartments.png',
-    category: 'Company News',
-    date: 'December 3, 2023',
-    author: 'Sarah Williams'
-  },
-  {
-    id: 5,
-    title: 'Sustainable Building Practices in Nigeria',
-    excerpt: 'How eco-friendly construction is shaping the future of Nigerian real estate.',
-    image: '/images/beacon.png',
-    category: 'Market Trends',
-    date: 'November 30, 2023',
-    author: 'David Chen'
-  },
-  {
-    id: 6,
-    title: 'Property Market Review: Q4 2023',
-    excerpt: 'Analysis of real estate trends and market performance in the last quarter.',
-    image: '/images/gs-apartments.png',
-    category: 'Market Trends',
-    date: 'November 28, 2023',
-    author: 'Amanda Brown'
-  }
-]
+import { supabase } from '@/lib/supabase'
 
 const categories = [
   'All Posts',
@@ -77,6 +21,52 @@ const categories = [
 ]
 
 export default function BlogPage() {
+  const [posts, setPosts] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
+  const [currentPage, setCurrentPage] = useState(1)
+  const [totalPages, setTotalPages] = useState(0)
+  const [selectedCategory, setSelectedCategory] = useState('All Posts')
+  const [searchQuery, setSearchQuery] = useState('')
+  const postsPerPage = 6
+
+  useEffect(() => {
+    fetchPosts()
+  }, [currentPage, selectedCategory, searchQuery])
+
+  const fetchPosts = async () => {
+    setLoading(true)
+    let query = supabase
+      .from('posts')
+      .select('*', { count: 'exact' })
+      .order('date', { ascending: false })
+
+    // Apply category filter
+    if (selectedCategory !== 'All Posts') {
+      query = query.eq('category', selectedCategory)
+    }
+
+    // Apply search filter
+    if (searchQuery) {
+      query = query.or(`title.ilike.%${searchQuery}%,content.ilike.%${searchQuery}%`)
+    }
+
+    // Apply pagination
+    const from = (currentPage - 1) * postsPerPage
+    const to = from + postsPerPage - 1
+    query = query.range(from, to)
+
+    const { data, count, error } = await query
+
+    if (error) {
+      console.error(error)
+      return
+    }
+
+    setPosts(data || [])
+    setTotalPages(Math.ceil((count || 0) / postsPerPage))
+    setLoading(false)
+  }
+
   return (
     <div>
       {/* Hero Section */}
@@ -117,14 +107,17 @@ export default function BlogPage() {
               <Input
                 placeholder="Search articles..."
                 className="pl-10"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
             <div className="flex gap-2 overflow-x-auto pb-2">
               {categories.map((category) => (
                 <Button
                   key={category}
-                  variant={category === 'All Posts' ? 'default' : 'outline'}
+                  variant={category === selectedCategory ? 'default' : 'outline'}
                   size="sm"
+                  onClick={() => setSelectedCategory(category)}
                 >
                   {category}
                 </Button>
@@ -132,81 +125,115 @@ export default function BlogPage() {
             </div>
           </div>
 
-          {/* Featured Post */}
-          <Card className="mb-16 overflow-hidden group">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="relative h-[300px] md:h-full">
-                <Image
-                  src="/images/beacon.png"
-                  alt="Featured Post"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-8">
-                <Badge className="mb-4 bg-gold hover:bg-gold/80">Featured</Badge>
-                <h2 className="text-2xl font-bold mb-4">The Future of Real Estate in Nigeria</h2>
-                <p className="text-muted-foreground mb-6">
-                  Exploring emerging trends and opportunities in Nigeria's dynamic property market. Learn about the latest developments and investment opportunities.
-                </p>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4" />
-                    <span>December 10, 2023</span>
-                  </div>
-                </div>
-                <Button variant="outline" className="group" asChild>
-                  <Link href="/blog/1">
-                    Read More
-                    <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </Card>
-
-          {/* Blog Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <Card key={post.id} className="overflow-hidden group">
-                <div className="relative h-48">
+          {/* Featured Post - Show first post as featured */}
+          {posts.length > 0 && (
+            <Card className="mb-16 overflow-hidden group">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="relative h-[300px] md:h-full">
                   <Image
-                    src={post.image}
-                    alt={post.title}
+                    src={posts[0].image}
+                    alt="Featured Post"
                     fill
                     style={{ objectFit: "cover" }}
                     className="group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
-                    <span>{post.date}</span>
-                    <Badge variant="outline">{post.category}</Badge>
+                <div className="p-8">
+                  <Badge className="mb-4 bg-gold hover:bg-gold/80">Featured</Badge>
+                  <h2 className="text-2xl font-bold mb-4">{posts[0].title}</h2>
+                  <p className="text-muted-foreground mb-6">
+                    {posts[0].excerpt}
+                  </p>
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      <span>{posts[0].date}</span>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{post.title}</h3>
-                  <p className="text-muted-foreground mb-4">{post.excerpt}</p>
-                  <Button variant="link" className="px-0 group" asChild>
-                    <Link href={`/blog/${post.id}`}>
+                  <Button variant="outline" className="group" asChild>
+                    <Link href={`/blog/${posts[0].id}`}>
                       Read More
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </Button>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              </div>
+            </Card>
+          )}
+
+          {/* Blog Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {loading ? (
+              // Add loading skeletons here
+              Array(6).fill(0).map((_, i) => (
+                <Card key={i} className="animate-pulse">
+                  <div className="h-48 bg-gray-200" />
+                  <CardContent className="p-6">
+                    <div className="h-4 bg-gray-200 rounded mb-4" />
+                    <div className="h-8 bg-gray-200 rounded mb-4" />
+                    <div className="h-4 bg-gray-200 rounded" />
+                  </CardContent>
+                </Card>
+              ))
+            ) : (
+              posts.slice(1).map((post) => (
+                <Card key={post.id} className="overflow-hidden group">
+                  <div className="relative h-48">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      className="group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
+                      <span>{post.date}</span>
+                      <Badge variant="outline">{post.category}</Badge>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{post.title}</h3>
+                    <p className="text-muted-foreground mb-4">{post.excerpt}</p>
+                    <Button variant="link" className="px-0 group" asChild>
+                      <Link href={`/blog/${post.id}`}>
+                        Read More
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))
+            )}
           </div>
 
           {/* Pagination */}
           <div className="flex justify-center mt-12">
             <div className="flex items-center gap-2">
-              <Button variant="outline" size="icon" disabled>
+              <Button
+                variant="outline"
+                size="icon"
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage(p => p - 1)}
+              >
                 <ArrowRight className="h-4 w-4 rotate-180" />
               </Button>
-              <Button variant="outline" size="sm" className="bg-primary text-primary-foreground">1</Button>
-              <Button variant="outline" size="sm">2</Button>
-              <Button variant="outline" size="sm">3</Button>
-              <Button variant="outline" size="icon">
+              {Array.from({ length: totalPages }, (_, i) => (
+                <Button
+                  key={i + 1}
+                  variant="outline"
+                  size="sm"
+                  className={currentPage === i + 1 ? 'bg-primary text-primary-foreground' : ''}
+                  onClick={() => setCurrentPage(i + 1)}
+                >
+                  {i + 1}
+                </Button>
+              ))}
+              <Button
+                variant="outline"
+                size="icon"
+                disabled={currentPage === totalPages}
+                onClick={() => setCurrentPage(p => p + 1)}
+              >
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
