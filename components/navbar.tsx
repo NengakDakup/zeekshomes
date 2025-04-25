@@ -30,9 +30,9 @@ const navItems = [
 ];
 
 const projectsItems = [
-  { name: "Ongoing Projects", href: "/projects/ongoing", description: "View our current development projects" },
-  { name: "Completed Projects", href: "/projects/completed", description: "Explore our successfully delivered properties" },
-  { name: "Upcoming Projects", href: "/projects/upcoming", description: "Get a sneak peek of our future developments" },
+  { name: "Ongoing Projects", href: "/projects#ongoing", description: "View our current development projects" },
+  { name: "Completed Projects", href: "/projects#completed", description: "Explore our successfully delivered properties" },
+  { name: "Upcoming Projects", href: "/projects#upcoming", description: "Get a sneak peek of our future developments" },
   { name: "Beacon City Estate", href: "/projects/beacon-city", description: "Our flagship luxury estate development" },
 ];
 
