@@ -89,7 +89,7 @@ export default function PropertiesPage() {
         query = query.gte('price', min).lte('price', max)
       }
       if (filters.search) {
-        query = query.or(`title.ilike.%${filters.search}%,description.ilike.%${filters.search}%,location.ilike.%${filters.search}%`)
+        query = query.ilike('title', `%${filters.search}%`)
       }
 
       // Apply sorting
@@ -248,10 +248,13 @@ export default function PropertiesPage() {
               <div className="relative flex-grow">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
-                  placeholder="Search by keyword"
+                  placeholder="Search properties by title..."
                   className="pl-10"
                   value={filters.search}
-                  onChange={(e) => setFilters(f => ({ ...f, search: e.target.value }))}
+                  onChange={(e) => {
+                    setFilters(f => ({ ...f, search: e.target.value }))
+                    setCurrentPage(1)
+                  }}
                 />
               </div>
               <Button

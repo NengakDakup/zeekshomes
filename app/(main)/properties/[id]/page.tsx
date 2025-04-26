@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import MaxWidthContent from '@/components/maxWidthContent'
 import { supabase } from '@/lib/supabase'
-import { MapPin, BedDouble, Bath, Square, ArrowLeft, ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { MapPin, BedDouble, Bath, Square, ArrowLeft, ChevronLeft, ChevronRight, X, Loader2 } from 'lucide-react'
 
 interface PropertyDetailProps {
   params: {
@@ -58,11 +58,59 @@ export default function PropertyDetail({ params }: PropertyDetailProps) {
   }
 
   if (loading) {
-    return <div>Loading...</div>
+    return (
+      <div>
+        <div className="relative h-[60vh] bg-muted animate-pulse" />
+        <MaxWidthContent>
+          <div className="py-12">
+            <div className="mb-12 space-y-4">
+              <div className="h-4 w-24 bg-muted rounded animate-pulse" />
+              <div className="h-8 w-2/3 bg-muted rounded animate-pulse" />
+              <div className="h-4 w-1/3 bg-muted rounded animate-pulse" />
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-2">
+                <Card className="p-6">
+                  <div className="space-y-6">
+                    <div className="h-6 w-1/4 bg-muted rounded animate-pulse" />
+                    <div className="grid grid-cols-3 gap-4">
+                      {[1, 2, 3].map((i) => (
+                        <div key={i} className="h-8 bg-muted rounded animate-pulse" />
+                      ))}
+                    </div>
+                    <div className="space-y-2">
+                      {[1, 2, 3, 4].map((i) => (
+                        <div key={i} className="h-4 bg-muted rounded animate-pulse" />
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+              </div>
+              <Card className="p-6 h-[200px] animate-pulse" />
+            </div>
+          </div>
+        </MaxWidthContent>
+      </div>
+    )
   }
 
   if (!property) {
-    return <div>Property not found</div>
+    return (
+      <div className="min-h-[80vh] flex flex-col items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Property Not Found</h2>
+          <p className="text-muted-foreground mb-8">
+            The property you're looking for doesn't exist or has been removed.
+          </p>
+          <Button asChild>
+            <Link href="/properties">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Properties
+            </Link>
+          </Button>
+        </div>
+      </div>
+    )
   }
 
   return (
