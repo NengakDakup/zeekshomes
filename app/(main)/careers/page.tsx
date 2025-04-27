@@ -1,106 +1,127 @@
 'use client'
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import MaxWidthContent from "@/components/maxWidthContent";
-import { Briefcase, MapPin, Timer } from "lucide-react";
 
-const careers = [
-  {
-    id: "senior-architect",
-    title: "Senior Architect",
-    department: "Design",
-    location: "Abuja",
-    type: "Full-time",
-    experience: "5+ years",
-    description: "We're looking for an experienced architect to lead design projects and mentor junior team members.",
-  },
-  {
-    id: "project-manager",
-    title: "Project Manager",
-    department: "Construction",
-    location: "Lagos",
-    type: "Full-time",
-    experience: "8+ years",
-    description: "Seeking a seasoned project manager to oversee large-scale residential developments.",
-  },
-  {
-    id: "property-consultant",
-    title: "Property Consultant",
-    department: "Sales",
-    location: "Lagos",
-    type: "Full-time",
-    experience: "3+ years",
-    description: "Join our sales team to help clients find their perfect property investment.",
-  },
-];
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Briefcase, MapPin, Building, Clock } from 'lucide-react'
+import MaxWidthContent from '@/components/maxWidthContent'
+import { supabase } from '@/lib/supabase'
+
+interface Career {
+  id: number
+  title: string
+  department: string
+  location: string
+  type: string
+  experience: string
+  description: string
+  active: boolean
+}
 
 export default function CareersPage() {
+  const [careers, setCareers] = useState<Career[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetchCareers()
+  }, [])
+
+  const fetchCareers = async () => {
+    const { data, error } = await supabase
+      .from('careers')
+      .select('*')
+      .eq('active', true)
+      .order('created_at', { ascending: false })
+
+    if (!error) {
+      setCareers(data || [])
+    }
+    setLoading(false)
+  }
+
   return (
     <div>
-      {/* Hero Section */}
       <section className="relative pt-40 bg-primary">
         <MaxWidthContent>
           <div className="max-w-3xl mt-5 bg-white p-6 md:p-10 border-l-8 border-gold">
-            <h1 className="text-3xl font-bold mb-3 text-gold">Join Our Team</h1>
-            <p className="text-lg mb-8">
-              Build your career with one of Nigeria's fastest-growing real estate developers.
+            <h1 className="text-3xl font-bold mb-3">Career Opportunities</h1>
+            <p className="text-lg">
+              Join our team of professionals dedicated to transforming the real estate landscape.
             </p>
           </div>
         </MaxWidthContent>
       </section>
 
-      {/* Career Opportunities */}
       <section className="py-16">
         <MaxWidthContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {careers.map((career) => (
-              <Card key={career.id} className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <Badge className="bg-gold mb-2">{career.department}</Badge>
-                      <h3 className="text-xl font-bold">{career.title}</h3>
-                    </div>
-                    <Badge variant="outline">{career.type}</Badge>
-                  </div>
-                  <div className="space-y-2 mb-6 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4" />
-                      <span>{career.location}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Briefcase className="h-4 w-4" />
-                      <span>{career.experience}</span>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground mb-6">{career.description}</p>
-                  <Button className="w-full" asChild>
-                    <Link href={`/careers/${career.id}`}>View & Apply</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </MaxWidthContent>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-16 bg-muted">
-        <MaxWidthContent>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Why Work With Us?</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Join a team that values innovation, growth, and excellence.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Add your values/benefits cards here */}
-          </div>
+          {loading ? (
+            <div className="space-y-4">
+              {[...Array(3)].map((_, i) => (
+                <Card key={i} className="w-full animate-pulse">
+                  <CardContent className="p-6">
+                    <div className="h-6 bg-muted rounded w-1/4 mb-4" />
+                    <div className="h-4 bg-muted rounded w-3/4 mb-2" />
+                    <div className="h-4 bg-muted rounded w-1/2" />
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : careers.length === 0 ? (
+            <div className="text-center py-12">
+              <h2 className="text-2xl font-bold mb-2">No Open Positions</h2>
+              <p className="text-muted-foreground">
+                There are currently no open positions. Please check back later.
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-6">
+              {careers.map((career, index) => (
+                <motion.div
+                  key={career.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card>
+                    <CardContent className="p-6">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+                        <div>
+                          <h2 className="text-xl font-bold mb-2">{career.title}</h2>
+                          <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-1">
+                              <Building className="h-4 w-4" />
+                              <span>{career.department}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <MapPin className="h-4 w-4" />
+                              <span>{career.location}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Briefcase className="h-4 w-4" />
+                              <span>{career.type}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Clock className="h-4 w-4" />
+                              <span>{career.experience}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <Button asChild>
+                          <Link href={`/careers/${career.id}`}>View Position</Link>
+                        </Button>
+                      </div>
+                      <p className="text-muted-foreground line-clamp-2">{career.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </MaxWidthContent>
       </section>
     </div>
-  );
+  )
 }
