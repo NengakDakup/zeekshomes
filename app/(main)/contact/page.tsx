@@ -8,8 +8,12 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent } from '@/components/ui/card'
 import MaxWidthContent from '@/components/maxWidthContent'
+import { supabase } from '@/lib/supabase'
+import { useToast } from '@/hooks/use-toast'
 
 const ContactPage = () => {
+  const { toast } = useToast()
+  const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,9 +21,55 @@ const ContactPage = () => {
     message: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission logic here
+    setLoading(true)
+
+    // Simple validation
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields",
+        variant: "destructive"
+      })
+      setLoading(false)
+      return
+    }
+
+    try {
+      const { error } = await supabase
+        .from('messages')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          read: false
+        }])
+
+      if (error) throw error
+
+      toast({
+        title: "Success",
+        description: "Your message has been sent successfully. We'll get back to you soon.",
+      })
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -119,22 +169,26 @@ const ContactPage = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                      <label htmlFor="name" className="block text-sm font-medium mb-2">Name *</label>
                       <Input
                         id="name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="bg-white/50 backdrop-blur-sm"
+                        disabled={loading}
+                        required
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                      <label htmlFor="email" className="block text-sm font-medium mb-2">Email *</label>
                       <Input
                         type="email"
                         id="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="bg-white/50 backdrop-blur-sm"
+                        disabled={loading}
+                        required
                       />
                     </div>
                   </div>
@@ -145,20 +199,28 @@ const ContactPage = () => {
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       className="bg-white/50 backdrop-blur-sm"
+                      disabled={loading}
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">Message *</label>
                     <Textarea
                       id="message"
                       rows={6}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="bg-white/50 backdrop-blur-sm resize-none"
+                      disabled={loading}
+                      required
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full group">
-                    Send Message
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full group"
+                    disabled={loading}
+                  >
+                    {loading ? 'Sending...' : 'Send Message'}
                     <SendHorizontal className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
