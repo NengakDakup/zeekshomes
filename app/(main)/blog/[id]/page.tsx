@@ -10,6 +10,8 @@ import { Separator } from "@/components/ui/separator";
 import MaxWidthContent from "@/components/maxWidthContent";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
+import { useToast } from '@/hooks/use-toast'
+import { Input } from "@/components/ui/input";
 
 interface BlogPostProps {
   params: {
@@ -31,6 +33,9 @@ interface BlogPost {
 export default function BlogPost({ params }: BlogPostProps) {
   const [post, setPost] = useState<BlogPost | null>(null)
   const [loading, setLoading] = useState(true)
+  const { toast } = useToast()
+  const [email, setEmail] = useState('')
+  const [subscribing, setSubscribing] = useState(false)
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -52,6 +57,41 @@ export default function BlogPost({ params }: BlogPostProps) {
 
     fetchPost()
   }, [params.id])
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setSubscribing(true)
+
+    try {
+      const { error } = await supabase
+        .from('subscribers')
+        .insert([
+          {
+            email,
+            subscribed_from: 'blog_post',
+            active: true
+          }
+        ])
+
+      if (error) throw error
+
+      toast({
+        title: "Success!",
+        description: "You have been subscribed to our newsletter.",
+      })
+      setEmail('')
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message === 'duplicate key value violates unique constraint "subscribers_email_key"'
+          ? "You are already subscribed!"
+          : "Failed to subscribe. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
+      setSubscribing(false)
+    }
+  }
 
   if (loading) {
     return (
@@ -159,7 +199,20 @@ export default function BlogPost({ params }: BlogPostProps) {
                 <div className="bg-primary text-primary-foreground p-6 rounded-lg">
                   <h3 className="font-bold mb-4">Subscribe to Newsletter</h3>
                   <p className="text-sm mb-4">Get the latest real estate insights delivered to your inbox.</p>
-                  <Button className="w-full bg-gold hover:bg-gold/90">Subscribe Now</Button>
+                  <form onSubmit={handleSubscribe}>
+                    <Input
+                      type="email"
+                      placeholder="Enter your email"
+                      className="mb-2"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      disabled={subscribing}
+                    />
+                    <Button className="w-full bg-gold hover:bg-gold/90" disabled={subscribing}>
+                      {subscribing ? 'Subscribing...' : 'Subscribe Now'}
+                    </Button>
+                  </form>
                 </div>
               </div>
             </div>

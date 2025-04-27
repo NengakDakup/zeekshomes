@@ -1,10 +1,54 @@
+'use client'
+
 import Link from "next/link";
 import { Building, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import MaxWidthContent from "./maxWidthContent";
+import { useToast } from '@/hooks/use-toast'
+import { useState } from 'react'
+import { supabase } from '@/lib/supabase'
 
 export default function Footer() {
+  const { toast } = useToast()
+  const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+
+    try {
+      const { error } = await supabase
+        .from('subscribers')
+        .insert([
+          {
+            email,
+            subscribed_from: 'footer',
+            active: true
+          }
+        ])
+
+      if (error) throw error
+
+      toast({
+        title: "Success!",
+        description: "You have been subscribed to our newsletter.",
+      })
+      setEmail('')
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message === 'duplicate key value violates unique constraint "subscribers_email_key"'
+          ? "You are already subscribed!"
+          : "Failed to subscribe. Please try again.",
+        variant: "destructive"
+      })
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <footer className="bg-primary text-primary-foreground">
       <MaxWidthContent>
@@ -90,14 +134,20 @@ export default function Footer() {
               <p className="mb-4 text-primary-foreground/80">
                 Subscribe to our newsletter for the latest updates on new properties and offers.
               </p>
-              <div className="space-y-2">
+              <form onSubmit={handleSubscribe} className="space-y-2">
                 <Input
                   type="email"
                   placeholder="Your email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
+                  required
+                  disabled={loading}
                 />
-                <Button variant="secondary" className="w-full">Subscribe</Button>
-              </div>
+                <Button variant="secondary" className="w-full" type="submit" disabled={loading}>
+                  {loading ? 'Subscribing...' : 'Subscribe'}
+                </Button>
+              </form>
               <div className="mt-6">
                 <h4 className="font-medium mb-2">Follow Us</h4>
                 <div className="flex space-x-4">
