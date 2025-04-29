@@ -41,7 +41,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-3">
       <Card className="w-[400px]">
         <CardHeader>
           <CardTitle>Admin Login</CardTitle>
