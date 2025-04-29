@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import { Building, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import MaxWidthContent from "./maxWidthContent";
@@ -151,17 +151,16 @@ export default function Footer() {
               <div className="mt-6">
                 <h4 className="font-medium mb-2">Follow Us</h4>
                 <div className="flex space-x-4">
-                  <Link href="https://facebook.com" className="hover:text-primary-foreground/80">
+                  <Link target="_blank" href="https://www.facebook.com/share/1EGqS79sE8/" className="hover:text-primary-foreground/80">
                     <Facebook className="h-5 w-5" />
                   </Link>
-                  <Link href="https://twitter.com" className="hover:text-primary-foreground/80">
-                    <Twitter className="h-5 w-5" />
-                  </Link>
-                  <Link href="https://instagram.com" className="hover:text-primary-foreground/80">
+                  <Link target="_blank" href="https://www.instagram.com/zeekshomes.ng?igsh=MW95ZXVidG00bnBxNQ==" className="hover:text-primary-foreground/80">
                     <Instagram className="h-5 w-5" />
                   </Link>
-                  <Link href="https://linkedin.com" className="hover:text-primary-foreground/80">
-                    <Linkedin className="h-5 w-5" />
+                  <Link target="_blank" href="https://www.tiktok.com/@zeekshomes.ng?_t=ZM-8vnRPMYFqVC&_r=1" className="hover:text-primary-foreground/80">
+                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 4 15.66a6.34 6.34 0 0 0 10.95 4.37A6.33 6.33 0 0 0 17 15.66V8.28a8.16 8.16 0 0 0 4.59 1.42v-3z" />
+                    </svg>
                   </Link>
                 </div>
               </div>

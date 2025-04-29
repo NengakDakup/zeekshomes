@@ -85,3 +85,7 @@
     @apply font-segma;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
