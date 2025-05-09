@@ -8,6 +8,7 @@ import MaxWidthContent from "./maxWidthContent";
 import { useToast } from '@/hooks/use-toast'
 import { useState } from 'react'
 import { supabase } from '@/lib/supabase'
+import Image from "next/image";
 
 export default function Footer() {
   const { toast } = useToast()
@@ -57,6 +58,13 @@ export default function Footer() {
             {/* Company Info */}
             <div>
               <div className="flex items-center space-x-2 mb-4">
+                <Image
+                  src="/images/logo-white.png"
+                  alt="Zeeks Homes Logo"
+                  width={40}
+                  height={40}
+                  className=""
+                />
                 <span className="font-bold text-xl">Zeeks Homes</span>
               </div>
               <p className="mb-4 text-primary-foreground/80">
@@ -64,22 +72,22 @@ export default function Footer() {
               </p>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
+                  <MapPin className="h-4 w-4 shrink-0" />
                   <span>Novare Central Office, Dabala Crescent Wuse Zone 5 Abuja</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Phone className="h-4 w-4" />
+                  <Phone className="h-4 w-4 shrink-0" />
                   <span>09125555510, 09125555512</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4" />
+                  <Mail className="h-4 w-4 shrink-0" />
                   <span>sales@zeekshomes.ng</span>
                 </div>
               </div>
             </div>
 
             {/* Quick Links */}
-            <div>
+            <div className="md:text-center">
               <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
@@ -168,9 +176,8 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-primary-foreground/10">
-          <div className="container py-6 flex flex-col md:flex-row justify-between items-center">
+          <div className="container py-6 flex flex-col md:flex-row justify-around items-center">
             <p>© {new Date().getFullYear()} Zeeks Homes. All rights reserved.</p>
-            <p className="mt-2 md:mt-0">Designed & Developed with ❤️</p>
           </div>
         </div>
       </MaxWidthContent>

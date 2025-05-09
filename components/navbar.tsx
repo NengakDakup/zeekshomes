@@ -18,6 +18,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ArrowRight, ArrowRightToLineIcon, Facebook, Menu } from "lucide-react";
 import { Home, Building, Briefcase, FileText, Phone, Users, MapPin } from "lucide-react";
 import MaxWidthContent from "./maxWidthContent";
+import Image from "next/image";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -51,7 +52,14 @@ export default function Navbar() {
       <MaxWidthContent>
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-extrabold text-2xl">Zeeks Homes</span>
+            <Image
+              src="/images/logo-white.png"
+              alt="Zeeks Homes Logo"
+              width={40}
+              height={40}
+              className=""
+            />
+            <span className="font-black text-2xl">Zeeks Homes</span>
           </Link>
 
           {/* Desktop Navigation */}
