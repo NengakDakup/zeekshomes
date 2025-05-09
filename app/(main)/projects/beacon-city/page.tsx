@@ -15,7 +15,7 @@ export default function BeaconCityPage() {
       <section className="relative h-[60vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            src="/images/beacon2.png"
             alt="Beacon City Estate"
             fill
             style={{ objectFit: "cover" }}
@@ -30,16 +30,23 @@ export default function BeaconCityPage() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                 Beacon City Estate
               </h1>
+              <p className="text-lg md:text-xl">
+                <MapPin className="inline-block mr-2" /> AIRPORT ROAD, ABUJA
+              </p>
               <p className="text-lg md:text-xl mb-8">
-                Our flagship luxury estate development, representing the pinnacle of modern living in Lagos.
+                A Smart City where comfort meets innovation
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-white text-black hover:bg-white/90">
-                  Request Information
-                </Button>
-                <Button size="lg" className="bg-gold text-white border-white hover:bg-white/10">
-                  Schedule a Visit
-                </Button>
+                <Link href="/contact" className="w-full md:w-auto">
+                  <Button size="lg" className="bg-white text-black hover:bg-white/90">
+                    Request Information
+                  </Button>
+                </Link>
+                <Link href="/contact">
+                  <Button size="lg" className="bg-gold text-white border-white hover:bg-white/10">
+                    Schedule a Visit
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -53,7 +60,9 @@ export default function BeaconCityPage() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
               <p className="text-lg mb-6">
-                Set on 50 acres of prime land in Lekki, Beacon City Estate is an exclusive gated community that offers unparalleled luxury, security, and comfort. This flagship development by Zeeks Homes features 120 meticulously designed residences, ranging from elegant townhouses to spacious villas.
+                Beacon City is an ultra-modern estate development project in the heart of Abuja.
+                This Smart City integrates state-of-the-art infrastructure with sustainable living
+                solutions, creating a harmonious blend of technology and comfort.
               </p>
               <p className="mb-6">
                 Each home in Beacon City Estate is built to the highest standards, with premium finishes, smart home technology, and energy-efficient features. The estate also boasts world-class amenities, including a clubhouse, swimming pools, tennis courts, and beautifully landscaped parks.
@@ -65,13 +74,13 @@ export default function BeaconCityPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
                   <Home className="h-8 w-8 text-gold shrink-0 mb-2" />
-                  <h3 className="font-semibold text-gold">120 Units</h3>
-                  <p className="text-sm text-muted-foreground">Luxury Residences</p>
+                  <h3 className="font-semibold text-gold">300+ Units</h3>
+                  <p className="text-sm text-muted-foreground">Smart Homes</p>
                 </div>
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
                   <MapPin className="h-8 w-8 text-gold shrink-0 mb-2" />
-                  <h3 className="font-semibold text-gold">Lekki, Lagos</h3>
-                  <p className="text-sm text-muted-foreground">Prime Location</p>
+                  <h3 className="font-semibold text-gold">Airport Road</h3>
+                  <p className="text-sm text-muted-foreground">Abuja</p>
                 </div>
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
                   <Calendar className="h-8 w-8 text-gold shrink-0 mb-2" />
@@ -99,7 +108,7 @@ export default function BeaconCityPage() {
                   <CheckCircle className="h-5 w-5 text-gold shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold">Strategic Location</h3>
-                    <p>Situated in the heart of Lekki, with easy access to major highways, business districts, shopping centers, and international schools.</p>
+                    <p>Located along Airport Road, Abuja, with easy access to the city center and key infrastructure.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -127,11 +136,11 @@ export default function BeaconCityPage() {
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Project Type:</span>
-                      <span className="font-medium">Residential Estate</span>
+                      <span className="font-medium">Smart City Estate</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Property Types:</span>
-                      <span className="font-medium">Villas, Townhouses</span>
+                      <span className="font-medium">Semi-Detached Duplex, Fully-Detached Duplex</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Bedrooms:</span>
@@ -139,24 +148,23 @@ export default function BeaconCityPage() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Size Range:</span>
-                      <span className="font-medium">250-600 sqm</span>
+                      <span className="font-medium">300-500 sqm</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Price Range:</span>
-                      <span className="font-medium">₦120M - ₦350M</span>
+                      <span className="font-medium">₦5M - ₦8M</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Status:</span>
                       <Badge className="bg-green-600">Ongoing</Badge>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Completion:</span>
-                      <span className="font-medium">Phase 1: 2024</span>
-                    </div>
+
                   </div>
                   <Separator className="my-6" />
                   <div className="space-y-4">
-                    <Button className="w-full">Download Brochure</Button>
+                    <Link href="/BEACON-BROCHURE-BB.pdf" download>
+                      <Button className="w-full">Download Brochure</Button>
+                    </Link>
                     <Button variant="outline" className="w-full">Contact Sales Team</Button>
                   </div>
                 </CardContent>
@@ -173,7 +181,7 @@ export default function BeaconCityPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative h-64 rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="/images/beacon2.png"
                 alt="Beacon City Estate Exterior"
                 fill
                 style={{ objectFit: "cover" }}
@@ -181,7 +189,7 @@ export default function BeaconCityPage() {
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="/images/semi-detached.png"
                 alt="Beacon City Estate Villa"
                 fill
                 style={{ objectFit: "cover" }}
@@ -189,7 +197,7 @@ export default function BeaconCityPage() {
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80"
+                src="/images/fully-detached.png"
                 alt="Beacon City Estate Interior"
                 fill
                 style={{ objectFit: "cover" }}
@@ -197,7 +205,7 @@ export default function BeaconCityPage() {
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="/images/court.png"
                 alt="Beacon City Estate Exterior"
                 fill
                 style={{ objectFit: "cover" }}
@@ -205,7 +213,7 @@ export default function BeaconCityPage() {
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="/images/aerial.png"
                 alt="Beacon City Estate Living Room"
                 fill
                 style={{ objectFit: "cover" }}
@@ -213,7 +221,7 @@ export default function BeaconCityPage() {
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="/images/top.png"
                 alt="Beacon City Estate Pool"
                 fill
                 style={{ objectFit: "cover" }}
@@ -228,58 +236,61 @@ export default function BeaconCityPage() {
         <MaxWidthContent>
           <h2 className="text-3xl font-bold mb-8 text-center">Floor Plans</h2>
 
-          <Tabs defaultValue="villa" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-8">
-              <TabsTrigger value="villa">Villa</TabsTrigger>
-              <TabsTrigger value="townhouse">Townhouse</TabsTrigger>
-              <TabsTrigger value="penthouse">Penthouse</TabsTrigger>
+          <Tabs defaultValue="semi-detached-duplex" className="w-full">
+            <TabsList className="grid w-full max-w-[500px] mx-auto grid-cols-2 mb-8">
+              <TabsTrigger value="semi-detached-duplex">Semi-Detached Duplex</TabsTrigger>
+              <TabsTrigger value="fully-detached-duplex">Fully-Detached Duplex</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="villa">
+            <TabsContent value="semi-detached-duplex">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="relative h-[400px] rounded-lg overflow-hidden border">
                   <Image
-                    src="https://images.unsplash.com/photo-1580216643062-cf460548a66a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
-                    alt="Villa Floor Plan"
+                    src="/images/semi-plan.png"
+                    alt="Semi-detached Floor Plan"
                     fill
                     style={{ objectFit: "contain" }}
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-4">Luxury Villa</h3>
-                  <p className="mb-6">
-                    Our spacious 5-bedroom villas offer the ultimate in luxury living, with generous living spaces, premium finishes, and private gardens.
+                  <h3 className="text-2xl font-bold mb-4">Semi-Detached Duplex</h3>
+                  <p className="font-semibold mb-2">
+                    NGN 5,000,000
                   </p>
+                  <p className="mb-6">
+                    Our spacious 3-bedroom semi-detached duplex offers the ultimate in luxury living, with generous living spaces, and premium finishes.
+                  </p>
+
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <h4 className="font-semibold">Size</h4>
-                      <p>500-600 sqm</p>
+                      <p>300 sqm</p>
                     </div>
                     <div>
                       <h4 className="font-semibold">Bedrooms</h4>
-                      <p>5</p>
+                      <p>3</p>
                     </div>
                     <div>
                       <h4 className="font-semibold">Bathrooms</h4>
-                      <p>6</p>
+                      <p>3</p>
                     </div>
                     <div>
                       <h4 className="font-semibold">Garage</h4>
-                      <p>2 Cars</p>
+                      <p>4 Cars</p>
                     </div>
                   </div>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Master suite with walk-in closet</span>
+                      <span>Guest bedroom</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Gourmet kitchen with island</span>
+                      <span>Ante room</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Private swimming pool</span>
+                      <span>Living room</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
@@ -287,47 +298,53 @@ export default function BeaconCityPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Entertainment room</span>
+                      <span>Mini bar</span>
                     </div>
                   </div>
-                  <Button className="flex items-center gap-2">
-                    <Download className="h-4 w-4" /> Download Floor Plan
-                  </Button>
+                  <Link href="/BEACON-BROCHURE-BB.pdf" download>
+                    <Button className="flex items-center gap-2">
+                      <Download className="h-4 w-4" /> Download Floor Plan
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </TabsContent>
 
-            <TabsContent value="townhouse">
+            <TabsContent value="fully-detached-duplex">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="relative h-[400px] rounded-lg overflow-hidden border">
                   <Image
-                    src="https://images.unsplash.com/photo-1580216643062-cf460548a66a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
-                    alt="Townhouse Floor Plan"
+                    src="/images/fully-plan.png"
+                    alt="Fully detached Duplex"
                     fill
                     style={{ objectFit: "contain" }}
                   />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-4">Elegant Townhouse</h3>
+                  <h3 className="text-2xl font-bold mb-4">Fully-Detached Duplex</h3>
+                  <p className="font-semibold mb-2">
+                    NGN 8,000,000
+                  </p>
                   <p className="mb-6">
-                    Our 4-bedroom townhouses combine modern design with practical living spaces, perfect for families seeking comfort and style.
+                    500 sqm Plot: Perfect for larger homes with spacious yards, a 5 bedroom fully
+                    detached duplex.
                   </p>
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div>
                       <h4 className="font-semibold">Size</h4>
-                      <p>350-400 sqm</p>
+                      <p>500 sqm</p>
                     </div>
                     <div>
                       <h4 className="font-semibold">Bedrooms</h4>
-                      <p>4</p>
+                      <p>5</p>
                     </div>
                     <div>
                       <h4 className="font-semibold">Bathrooms</h4>
-                      <p>4.5</p>
+                      <p>5</p>
                     </div>
                     <div>
                       <h4 className="font-semibold">Garage</h4>
-                      <p>2 Cars</p>
+                      <p>6 Cars</p>
                     </div>
                   </div>
                   <div className="space-y-2 mb-6">
@@ -341,7 +358,7 @@ export default function BeaconCityPage() {
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>Private garden</span>
+                      <span>Open BQ</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-primary" />
@@ -352,71 +369,11 @@ export default function BeaconCityPage() {
                       <span>Rooftop terrace</span>
                     </div>
                   </div>
-                  <Button className="flex items-center gap-2">
-                    <Download className="h-4 w-4" /> Download Floor Plan
-                  </Button>
-                </div>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="penthouse">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div className="relative h-[400px] rounded-lg overflow-hidden border">
-                  <Image
-                    src="https://images.unsplash.com/photo-1580216643062-cf460548a66a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
-                    alt="Penthouse Floor Plan"
-                    fill
-                    style={{ objectFit: "contain" }}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">Luxury Penthouse</h3>
-                  <p className="mb-6">
-                    Our exclusive penthouses offer panoramic views, expansive living spaces, and the ultimate in luxury and privacy.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div>
-                      <h4 className="font-semibold text-gold">Size</h4>
-                      <p>450-550 sqm</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gold">Bedrooms</h4>
-                      <p>4</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gold">Bathrooms</h4>
-                      <p>5</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gold">Garage</h4>
-                      <p>2 Cars</p>
-                    </div>
-                  </div>
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
-                      <span>Panoramic views</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
-                      <span>Gourmet kitchen with premium appliances</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
-                      <span>Private elevator access</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
-                      <span>Spacious terrace</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-gold shrink-0" />
-                      <span>Home automation system</span>
-                    </div>
-                  </div>
-                  <Button className="flex items-center gap-2">
-                    <Download className="h-4 w-4" /> Download Floor Plan
-                  </Button>
+                  <Link href="/BEACON-BROCHURE-BB.pdf" download>
+                    <Button className="flex items-center gap-2">
+                      <Download className="h-4 w-4" /> Download Floor Plan
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </TabsContent>
@@ -431,43 +388,43 @@ export default function BeaconCityPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div className="flex flex-col items-center text-center">
               <Shield className="h-12 w-12 text-primary mb-4" />
+              <h3 className="font-semibold mb-2">Gated Community</h3>
+              <p className="text-sm text-muted-foreground">Ensuring safety and privacy for all residents with controlled access.</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <Shield className="h-12 w-12 text-primary mb-4" />
               <h3 className="font-semibold mb-2">24/7 Security</h3>
-              <p className="text-sm text-muted-foreground">Gated community with round-the-clock security personnel and CCTV surveillance.</p>
+              <p className="text-sm text-muted-foreground">Professional security personnel and advanced surveillance systems.</p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <Pool className="h-12 w-12 text-primary mb-4" />
-              <h3 className="font-semibold mb-2">Swimming Pools</h3>
-              <p className="text-sm text-muted-foreground">Olympic-sized community pool and children's pool with lounging areas.</p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <Dumbbell className="h-12 w-12 text-primary mb-4" />
-              <h3 className="font-semibold mb-2">Fitness Center</h3>
-              <p className="text-sm text-muted-foreground">State-of-the-art gym with cardio and strength training equipment.</p>
+              <Car className="h-12 w-12 text-primary mb-4" />
+              <h3 className="font-semibold mb-2">Paved Roads</h3>
+              <p className="text-sm text-muted-foreground">Well-maintained and beautifully designed roads and walkways.</p>
             </div>
             <div className="flex flex-col items-center text-center">
               <Trees className="h-12 w-12 text-primary mb-4" />
-              <h3 className="font-semibold mb-2">Parks & Gardens</h3>
-              <p className="text-sm text-muted-foreground">Beautifully landscaped green spaces with walking paths and seating areas.</p>
+              <h3 className="font-semibold mb-2">Green Spaces</h3>
+              <p className="text-sm text-muted-foreground">Lush, landscaped gardens and recreational areas for community enjoyment.</p>
             </div>
             <div className="flex flex-col items-center text-center">
-              <Building className="h-12 w-12 text-primary mb-4" />
-              <h3 className="font-semibold mb-2">Clubhouse</h3>
-              <p className="text-sm text-muted-foreground">Community clubhouse with event spaces, lounge, and business center.</p>
+              <Zap className="h-12 w-12 text-primary mb-4" />
+              <h3 className="font-semibold mb-2">Electricity Supply</h3>
+              <p className="text-sm text-muted-foreground">Stable and reliable power supply throughout the estate.</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <Dumbbell className="h-12 w-12 text-primary mb-4" />
+              <h3 className="font-semibold mb-2">Sports Facilities</h3>
+              <p className="text-sm text-muted-foreground">Basketball courts, playgrounds and recreational areas.</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <Dumbbell className="h-12 w-12 text-primary mb-4" />
+              <h3 className="font-semibold mb-2">Health Centre</h3>
+              <p className="text-sm text-muted-foreground">Modern fitness facility and wellness center for residents.</p>
             </div>
             <div className="flex flex-col items-center text-center">
               <Wifi className="h-12 w-12 text-primary mb-4" />
               <h3 className="font-semibold mb-2">High-Speed Internet</h3>
               <p className="text-sm text-muted-foreground">Fiber optic internet connectivity throughout the estate.</p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <Droplet className="h-12 w-12 text-primary mb-4" />
-              <h3 className="font-semibold mb-2">Water Treatment</h3>
-              <p className="text-sm text-muted-foreground">Advanced water purification system ensuring clean water supply.</p>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <Zap className="h-12 w-12 text-primary mb-4" />
-              <h3 className="font-semibold mb-2">Power Backup</h3>
-              <p className="text-sm text-muted-foreground">Uninterrupted power supply with backup generators and solar options.</p>
             </div>
           </div>
         </MaxWidthContent>
@@ -480,14 +437,15 @@ export default function BeaconCityPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Strategic Location</h2>
               <p className="text-lg mb-6">
-                Beacon City Estate is strategically located in the heart of Lekki, one of Lagos' most prestigious neighborhoods, offering convenient access to business districts, shopping centers, schools, and leisure facilities.
+                Beacon City is strategically located along Airport Road, Abuja, offering seamless
+                connectivity to the city's major landmarks and infrastructure.
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
                   <Car className="h-5 w-5 text-gold shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gold">Excellent Connectivity</h3>
-                    <p>15 minutes to Lekki-Epe Expressway, 25 minutes to Victoria Island, 45 minutes to Murtala Muhammed International Airport.</p>
+                    <h3 className="font-semibold text-gold">Key Distances</h3>
+                    <p>10 minutes to Airport, 15 minutes to City Center, 20 minutes to Central Business District</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -505,11 +463,10 @@ export default function BeaconCityPage() {
                   </div>
                 </div>
               </div>
-              <Button>Get Directions</Button>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2144&q=80"
+                src="/images/top.png"
                 alt="Beacon City Estate Location"
                 fill
                 style={{ objectFit: "cover" }}
@@ -523,13 +480,12 @@ export default function BeaconCityPage() {
       <section className="py-16 bg-muted">
         <MaxWidthContent>
           <h2 className="text-3xl font-bold mb-8 text-center">Payment Plans</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="border-primary">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4 text-center">Outright Payment</h3>
                 <div className="text-center mb-6">
-                  <span className="text-3xl font-bold">5%</span>
-                  <span className="text-muted-foreground"> Discount</span>
+                  <span className="text-muted-foreground"> Discounted Price</span>
                 </div>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center gap-2">
@@ -538,7 +494,7 @@ export default function BeaconCityPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>5% discount on property price</span>
+                    <span>Discount on property price</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
@@ -559,7 +515,7 @@ export default function BeaconCityPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-center">Installment Plan</h3>
                 <div className="text-center mb-6">
-                  <span className="text-3xl font-bold">30%</span>
+                  <span className="text-3xl font-bold">50%</span>
                   <span className="text-muted-foreground"> Initial Payment</span>
                 </div>
                 <ul className="space-y-2 mb-6">
@@ -569,43 +525,15 @@ export default function BeaconCityPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>Balance spread over 24 months</span>
+                    <span>Balance spread over 3-6 months</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>No interest charges</span>
+                    <span>Discounted interest charges</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
                     <span>Flexible payment schedule</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-primary">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4 text-center">Mortgage Option</h3>
-                <div className="text-center mb-6">
-                  <span className="text-3xl font-bold">20%</span>
-                  <span className="text-muted-foreground"> Down Payment</span>
-                </div>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>20% down payment</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>Partnership with leading banks</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>Up to 20-year mortgage terms</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>Competitive interest rates</span>
                   </li>
                 </ul>
               </CardContent>
@@ -629,9 +557,11 @@ export default function BeaconCityPage() {
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/contact">Contact Sales Team</Link>
               </Button>
-              <Button size="lg" className="bg-gold text-white border-white hover:bg-white/10">
-                Download Brochure
-              </Button>
+              <Link href="/BEACON-BROCHURE-BB.pdf" download>
+                <Button size="lg" className="bg-gold text-white border-white hover:bg-white/10">
+                  Download Brochure
+                </Button>
+              </Link>
             </div>
           </div>
         </MaxWidthContent>
