@@ -529,7 +529,7 @@ export default function BeaconCityPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>Discounted interest charges</span>
+                    <span>Discounted Interest charges</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
