@@ -390,7 +390,7 @@ export default function Home() {
               <div className="flex items-center mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                    src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Client"
                     fill
                     style={{ objectFit: "cover" }}
@@ -410,7 +410,7 @@ export default function Home() {
               <div className="flex items-center mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                    src="https://images.unsplash.com/photo-1703059680844-cc6a926737d9?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Client"
                     fill
                     style={{ objectFit: "cover" }}
@@ -430,7 +430,7 @@ export default function Home() {
               <div className="flex items-center mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80"
+                    src="https://images.unsplash.com/photo-1581941894991-b7f75a66b7bf?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Client"
                     fill
                     style={{ objectFit: "cover" }}
