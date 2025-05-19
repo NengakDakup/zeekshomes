@@ -128,7 +128,7 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-muted-foreground">09125555510, 09125555512</p>
+                      <p className="text-muted-foreground">09125555512</p>
                     </div>
                   </motion.div>
 

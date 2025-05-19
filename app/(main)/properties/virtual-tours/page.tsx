@@ -66,8 +66,8 @@ const VirtualToursPage = () => {
                   </div>
                 </div>
                 <Button className="w-full" asChild>
-                  <Link href="/properties/virtual-tours/luxury-waterfront-villa">
-                    Start Virtual Tour
+                  <Link href="#">
+                    Coming Soon
                   </Link>
                 </Button>
               </CardContent>
@@ -113,8 +113,8 @@ const VirtualToursPage = () => {
                   </div>
                 </div>
                 <Button className="w-full" asChild>
-                  <Link href="/properties/virtual-tours/beacon-city-villa">
-                    Start Virtual Tour
+                  <Link href="#">
+                    Coming Soon
                   </Link>
                 </Button>
               </CardContent>
@@ -160,8 +160,8 @@ const VirtualToursPage = () => {
                   </div>
                 </div>
                 <Button className="w-full" asChild>
-                  <Link href="/properties/virtual-tours/beacon-city-villa">
-                    Start Virtual Tour
+                  <Link href="#">
+                    Coming Soon
                   </Link>
                 </Button>
               </CardContent>
