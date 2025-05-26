@@ -23,7 +23,7 @@ const navigation = [
   { name: 'Projects', href: '/admin/projects', icon: Building },
   { name: 'Messages', href: '/admin/messages', icon: MessageSquare },
   { name: 'Subscribers', href: '/admin/subscribers', icon: Users },
-  { name: '3D Tours', href: '/admin/tours', icon: Cuboid },
+  { name: '3D Tours', href: '/admin/virtual-tours', icon: Cuboid },
   {
     name: 'Careers',
     icon: Briefcase,
