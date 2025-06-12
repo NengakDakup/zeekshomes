@@ -68,7 +68,7 @@ export default function Footer() {
                 <span className="font-bold text-xl">Zeeks Homes</span>
               </div>
               <p className="mb-4 text-primary-foreground/80">
-                Building dreams and creating communities since 2010. Your trusted partner in real estate development.
+                Building LEGACIES, INSPIRING GENERATONS.Your trusted partner in real estate development.
               </p>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -77,11 +77,11 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 shrink-0" />
-                  <span>09125555512</span>
+                  <span>09137190000, 09123729000</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 shrink-0" />
-                  <span>sales@zeekshomes.ng</span>
+                  <span>hello@zeekshomes.ng</span>
                 </div>
               </div>
             </div>

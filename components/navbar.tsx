@@ -34,7 +34,7 @@ const projectsItems = [
   { name: "Ongoing Projects", href: "/projects#ongoing", description: "View our current development projects" },
   { name: "Completed Projects", href: "/projects#completed", description: "Explore our successfully delivered properties" },
   { name: "Upcoming Projects", href: "/projects#upcoming", description: "Get a sneak peek of our future developments" },
-  { name: "Beacon City Estate", href: "/projects/beacon-city", description: "Our flagship luxury estate development" },
+  // { name: "Beacon City Estate", href: "/projects/beacon-city", description: "Our flagship luxury estate development" },
 ];
 
 const propertiesItems = [
@@ -59,7 +59,6 @@ export default function Navbar() {
               height={40}
               className=""
             />
-            <span className="font-black text-2xl">Zeeks Homes</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -23,10 +23,11 @@ export default function AboutPage() {
         </div>
         <div className="w-screen h-full relative z-10 text-white">
           <div className="bg-white border-l-8 border-gold text-black p-10 max-w-[1000px] absolute bottom-0 left-0">
-            <div className="text-gold font-extrabold text-sm mb-4">WELCOME TO ZEEKS HOMES</div>
             <h1 className="text-3xl font-bold mb-6">About Zeeks Homes</h1>
             <p className="mb-3">
-              Zeeks Homes, a distinguished subsidiary of the renowned Zeeks Group of Companies, stands as a beacon of excellence in the realm of real estate innovation.
+              Zeeks Homes, a distinguished subsidiary of the renowned Zeeks Group of Companies, stands as
+              a beacon of excellence in the realm of real estate innovation.
+
             </p>
             <Link className="text-gold inline-flex items-center" href="#our-story">Read More <ChevronsDown /></Link>
           </div>
@@ -224,13 +225,6 @@ export default function AboutPage() {
               </p>
               <div className="space-y-6">
                 <div className="flex items-start gap-3">
-                  <Leaf className="h-6 w-6 text-gold mt-1 shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-gold">Environmental Initiatives</h3>
-                    <p>We've planted over 10,000 trees across Nigeria and implemented waste reduction programs in all our developments.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
                   <Users className="h-6 w-6 text-gold mt-1 shrink-0" />
                   <div>
                     <h3 className="font-semibold text-gold">Education Support</h3>
@@ -244,11 +238,6 @@ export default function AboutPage() {
                     <p>We've built community centers, renovated schools, and provided clean water facilities in underserved areas.</p>
                   </div>
                 </div>
-              </div>
-              <div className="mt-8">
-                <Button asChild>
-                  <Link href="/csr">Learn More About Our CSR Initiatives</Link>
-                </Button>
               </div>
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden">

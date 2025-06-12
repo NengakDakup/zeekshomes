@@ -15,7 +15,8 @@ export default function ServicesPage() {
           <div className="max-w-3xl mt-5 bg-white p-6 md:p-10 border-l-8 border-gold">
             <h1 className="text-3xl font-bold mb-3 text-gold">Our Services</h1>
             <p className="text-lg mb-8">
-              Comprehensive real estate solutions tailored to meet your needs, delivered with excellence and professionalism.
+              Comprehensive real estate solutions tailored to meet your needs,
+              delivered with excellence and professionalism.
             </p>
           </div>
         </MaxWidthContent>
