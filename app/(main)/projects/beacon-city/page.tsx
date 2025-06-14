@@ -68,13 +68,13 @@ export default function BeaconCityPage() {
                 Each home in Beacon City Estate is built to the highest standards, with premium finishes, smart home technology, and energy-efficient features. The estate also boasts world-class amenities, including a clubhouse, swimming pools, tennis courts, and beautifully landscaped parks.
               </p>
               <p className="mb-8">
-                With its strategic location, exceptional design, and comprehensive facilities, Beacon City Estate represents the future of luxury living in Nigeria. Construction began in 2023 and is scheduled for completion in phases through 2026.
+                With its strategic location, exceptional design, and comprehensive facilities, Beacon City Estate represents the future of luxury living in Nigeria. Construction began in 2025 and is scheduled for completion in phases through 2028.
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
                   <Home className="h-8 w-8 text-gold shrink-0 mb-2" />
-                  <h3 className="font-semibold text-gold">300+ Units</h3>
+                  <h3 className="font-semibold text-gold">70+ Units</h3>
                   <p className="text-sm text-muted-foreground">Smart Homes</p>
                 </div>
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
@@ -84,12 +84,12 @@ export default function BeaconCityPage() {
                 </div>
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
                   <Calendar className="h-8 w-8 text-gold shrink-0 mb-2" />
-                  <h3 className="font-semibold text-gold">2023-2026</h3>
+                  <h3 className="font-semibold text-gold">2025-2028</h3>
                   <p className="text-sm text-muted-foreground">Development Period</p>
                 </div>
                 <div className="flex flex-col items-center text-center p-4 bg-muted rounded-lg">
                   <Building className="h-8 w-8 text-gold shrink-0 mb-2" />
-                  <h3 className="font-semibold text-gold">50 Acres</h3>
+                  <h3 className="font-semibold text-gold">5 Hectres</h3>
                   <p className="text-sm text-muted-foreground">Land Area</p>
                 </div>
               </div>

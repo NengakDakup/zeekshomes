@@ -31,7 +31,7 @@ export default function ServicesPage() {
               <div className="absolute inset-0 bg-black/60 z-10" />
               <div className="relative h-[300px]">
                 <Image
-                  src="/images/beacon.png"
+                  src="/images/residential-development.png"
                   alt="Residential Development"
                   fill
                   style={{ objectFit: "cover" }}
@@ -56,7 +56,7 @@ export default function ServicesPage() {
               <div className="absolute inset-0 bg-black/60 z-10" />
               <div className="relative h-[300px]">
                 <Image
-                  src="/images/gs-apartments.png"
+                  src="/images/commercial.png"
                   alt="Commercial Development"
                   fill
                   style={{ objectFit: "cover" }}
@@ -81,7 +81,7 @@ export default function ServicesPage() {
               <div className="absolute inset-0 bg-black/60 z-10" />
               <div className="relative h-[300px]">
                 <Image
-                  src="/images/beacon.png"
+                  src="/images/property-management.png"
                   alt="Property Management"
                   fill
                   style={{ objectFit: "cover" }}
@@ -106,7 +106,7 @@ export default function ServicesPage() {
               <div className="absolute inset-0 bg-black/60 z-10" />
               <div className="relative h-[300px]">
                 <Image
-                  src="/images/mixed-use.png"
+                  src="/images/mix-used.png"
                   alt="Mixed-Use Development"
                   fill
                   style={{ objectFit: "cover" }}
@@ -170,7 +170,7 @@ export default function ServicesPage() {
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/beacon.png"
+                  src="/images/residential-development.png"
                   alt="Residential Development"
                   fill
                   style={{ objectFit: "cover" }}
@@ -182,7 +182,7 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" id="commercial">
               <div className="order-2 lg:order-1 relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/gs-apartments.png"
+                  src="/images/commercial.png"
                   alt="Commercial Development"
                   fill
                   style={{ objectFit: "cover" }}
@@ -260,7 +260,7 @@ export default function ServicesPage() {
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/beacon.png"
+                  src="/images/property-management.png"
                   alt="Property Management"
                   fill
                   style={{ objectFit: "cover" }}
@@ -305,7 +305,7 @@ export default function ServicesPage() {
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/mixed-use.png"
+                  src="/images/mix-used.png"
                   alt="Mixed-Use Development"
                   fill
                   style={{ objectFit: "cover" }}

@@ -18,9 +18,6 @@ const itemsList = [
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
         Building Dreams, Creating Communities
       </h1>
-      <p className="text-md md:text-lg mb-8">
-        Zeeks Homes, a distinguished subsidiary of the renowned Zeeks Group of Companies, stands as a beacon of excellence in real estate innovation.
-      </p>
       <div className="flex flex-wrap gap-4">
         <Button size="lg" className="border border-white bg-white text-black hover:text-white" asChild>
           <Link href="/properties">View Properties</Link>
@@ -323,15 +320,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="text-center p-6">
               <div className="flex justify-center mb-4">
-                <div className="relative w-16 h-16 rounded-lg overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                    alt="Residential Development"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="rounded-lg"
-                  />
-                </div>
+                <Building className="h-12 w-12 text-gold" />
               </div>
               <h3 className="text-xl font-bold mb-2">Residential Development</h3>
               <p className="text-muted-foreground mb-4">
@@ -344,15 +333,7 @@ export default function Home() {
 
             <Card className="text-center p-6">
               <div className="flex justify-center mb-4">
-                <div className="relative w-16 h-16 rounded-lg overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                    alt="Commercial Development"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="rounded-lg"
-                  />
-                </div>
+                <Briefcase className="h-12 w-12 text-gold" />
               </div>
               <h3 className="text-xl font-bold mb-2">Commercial Development</h3>
               <p className="text-muted-foreground mb-4">
@@ -365,15 +346,7 @@ export default function Home() {
 
             <Card className="text-center p-6">
               <div className="flex justify-center mb-4">
-                <div className="relative w-16 h-16 rounded-lg overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                    alt="Property Management"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="rounded-lg"
-                  />
-                </div>
+                <HomeIcon className="h-12 w-12 text-gold" />
               </div>
               <h3 className="text-xl font-bold mb-2">Property Management</h3>
               <p className="text-muted-foreground mb-4">
@@ -386,15 +359,7 @@ export default function Home() {
 
             <Card className="text-center p-6">
               <div className="flex justify-center mb-4">
-                <div className="relative w-16 h-16 rounded-lg overflow-hidden">
-                  <Image
-                    src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                    alt="Mixed-Use Development"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="rounded-lg"
-                  />
-                </div>
+                <Building className="h-12 w-12 text-gold" />
               </div>
               <h3 className="text-xl font-bold mb-2">Mixed-Use Development</h3>
               <p className="text-muted-foreground mb-4">
@@ -406,7 +371,6 @@ export default function Home() {
             </Card>
           </div>
         </MaxWidthContent>
-
       </section>
 
       {/* Testimonials */}
@@ -422,7 +386,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-6">
               <div className="flex items-center mb-4">
-                <div className="relative w-20 h-20 rounded-full overflow-hidden">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
                     src="https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Client"
@@ -442,7 +406,7 @@ export default function Home() {
 
             <Card className="p-6">
               <div className="flex items-center mb-4">
-                <div className="relative w-20 h-20 rounded-full overflow-hidden">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
                     src="https://images.unsplash.com/photo-1703059680844-cc6a926737d9?q=80&w=2097&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Client"
@@ -462,7 +426,7 @@ export default function Home() {
 
             <Card className="p-6">
               <div className="flex items-center mb-4">
-                <div className="relative w-20 h-20 rounded-full overflow-hidden">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
                     src="https://images.unsplash.com/photo-1581941894991-b7f75a66b7bf?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="Client"
