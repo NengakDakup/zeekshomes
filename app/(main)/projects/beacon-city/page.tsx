@@ -521,10 +521,6 @@ export default function BeaconCityPage() {
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-primary" />
-                    <span>30% initial payment</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
                     <span>Balance spread over 3-6 months</span>
                   </li>
                   <li className="flex items-center gap-2">

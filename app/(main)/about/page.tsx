@@ -24,11 +24,11 @@ export default function AboutPage() {
         <div className="w-screen h-full relative z-10 text-white">
           <div className="bg-white border-l-8 border-gold text-black p-10 max-w-[1000px] absolute bottom-0 left-0">
             <h1 className="text-3xl font-bold mb-6">About Zeeks Homes</h1>
-            <p className="mb-3">
+            {/* <p className="mb-3">
               Zeeks Homes, a distinguished subsidiary of the renowned Zeeks Group of Companies, stands as
               a beacon of excellence in the realm of real estate innovation.
 
-            </p>
+            </p> */}
             <Link className="text-gold inline-flex items-center" href="#our-story">Read More <ChevronsDown /></Link>
           </div>
         </div>
@@ -223,7 +223,7 @@ export default function AboutPage() {
               <p className="text-lg mb-6">
                 At Zeeks Homes, we believe in giving back to the communities where we operate. Our CSR initiatives focus on education, environmental sustainability, and community development.
               </p>
-              <div className="space-y-6">
+              {/* <div className="space-y-6">
                 <div className="flex items-start gap-3">
                   <Users className="h-6 w-6 text-gold mt-1 shrink-0" />
                   <div>
@@ -238,7 +238,7 @@ export default function AboutPage() {
                     <p>We've built community centers, renovated schools, and provided clean water facilities in underserved areas.</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <Image
