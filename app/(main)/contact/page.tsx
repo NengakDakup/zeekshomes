@@ -236,8 +236,7 @@ const ContactPage = () => {
             className="mt-24 rounded-xl overflow-hidden border shadow-lg"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8766304233657!2d7.4726721!3d9.0733397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0ba3302a3c37%3A0x2f3c1e8f8f6c9e82!2sNovare%20Central%20Wuse%20Zone%205!5e0!3m2!1sen!2sng!4v1701683394949!5m2!1sen!2sng"
-              width="100%"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.993776427853!2d7.457734800000001!3d9.064330400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b65498001b9%3A0x529281fbbc45a8ee!2sZEEKS-HOMES%20LIMITED!5e0!3m2!1sen!2sng!4v1749901386353!5m2!1sen!2sng" width="100%"
               height="500"
               style={{ border: 0 }}
               allowFullScreen
