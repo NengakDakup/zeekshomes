@@ -65,10 +65,9 @@ export default function Footer() {
                   height={40}
                   className=""
                 />
-                <span className="font-bold text-xl">Zeeks Homes</span>
               </div>
               <p className="mb-4 text-primary-foreground/80">
-                Building LEGACIES, INSPIRING GENERATONS.Your trusted partner in real estate development.
+                <strong>BUILDING LEGACIES, EMPOWERING GENERATIONS</strong>. Your trusted partner in real estate development.
               </p>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
